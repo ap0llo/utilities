@@ -3,12 +3,22 @@ using System.Collections.Generic;
 
 namespace Grynwald.Utilities
 {
+    /// <summary>
+    /// Implementation of <see cref="IEqualityComparer{T}"/> for tuples with three elements
+    /// composed of comparers for the tuple's individual items
+    /// </summary>
     public class TupleComparer<T1, T2, T3> : IEqualityComparer<(T1, T2, T3)>
     {
         readonly IEqualityComparer<T1> m_FirstItemComparer;
         readonly IEqualityComparer<T2> m_SecondItemComparer;
         readonly IEqualityComparer<T3> m_ThirdItemComparer;
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="TupleComparer{T1, T2, T3}"/>
+        /// </summary>
+        /// <param name="firstItemComparer">The comparer to use to determine equality of the tuple's first item</param>
+        /// <param name="secondItemComparer">The comparer to use to determine equality of the tuple's second item</param>
+        /// <param name="thirdItemComparer">The comparer to use to determine equality of the tuple's third item</param>
         public TupleComparer(
             IEqualityComparer<T1> firstItemComparer,
             IEqualityComparer<T2> secondItemComparer,

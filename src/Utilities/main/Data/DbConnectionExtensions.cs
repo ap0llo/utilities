@@ -4,20 +4,33 @@ using System.Data.Common;
 
 namespace Grynwald.Utilities.Data
 {
+    /// <summary>
+    /// Extension methods for <see cref="IDbConnection"/>
+    /// </summary>
     public static class DbConnectionExtensions
     {
+        /// <summary>
+        /// Executes the specified query and returns the number of affected rows
+        /// </summary>
         public static int ExecuteNonQuery(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {
             var command = connection.CreateCommand(sql, parameters);            
             return command.ExecuteNonQuery();
         }
-        
+
+        /// <summary>
+        /// Executes the specified query and converts the value of the firt column of
+        /// the first returned row to the specified type <typeparamref name="T"/>
+        /// </summary>
         public static T ExecuteScalar<T>(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {
             var command = connection.CreateCommand(sql, parameters);
             return (T)Convert.ChangeType(command.ExecuteScalar(), typeof(T));
         }
 
+        /// <summary>
+        /// Determines if a table with the specified name exists in the underlying database
+        /// </summary>
         public static bool TableExists(this IDbConnection connection, string tableName)
         {
             try
@@ -29,6 +42,7 @@ namespace Grynwald.Utilities.Data
                 return false;
             } 
         }
+
 
         static IDbCommand CreateCommand(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {

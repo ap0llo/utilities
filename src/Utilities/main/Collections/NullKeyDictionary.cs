@@ -70,9 +70,15 @@ namespace Grynwald.Utilities.Collections
         public bool IsReadOnly => m_InnerDictionary.IsReadOnly;
 
         
+        /// <summary>
+        /// Initiaizes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/>
+        /// </summary>
         public NullKeyDictionary() =>
             m_InnerDictionary = new Dictionary<TKey, TValue>();
 
+        /// <summary>
+        /// Initiaizes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/> using the specified key comprarer
+        /// </summary>
         public NullKeyDictionary(IEqualityComparer<TKey> keyComparer) =>
             m_InnerDictionary = new Dictionary<TKey, TValue>(keyComparer);
 
@@ -162,8 +168,6 @@ namespace Grynwald.Utilities.Collections
             {
                 return m_InnerDictionary.TryGetValue(key, out value);
             }
-        }
-
-        
+        }        
     }
 }
