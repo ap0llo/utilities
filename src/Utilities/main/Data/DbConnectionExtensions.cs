@@ -19,7 +19,7 @@ namespace Grynwald.Utilities.Data
         }
 
         /// <summary>
-        /// Executes the specified query and converts the value of the firt column of
+        /// Executes the specified query and converts the value of the first column of
         /// the first returned row to the specified type <typeparamref name="T"/>
         /// </summary>
         public static T ExecuteScalar<T>(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
