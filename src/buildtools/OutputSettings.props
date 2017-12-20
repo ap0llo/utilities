@@ -23,9 +23,14 @@
     <!-- Build version info -->    
 	  <AssemblyVersion>$(BaseVersion).0</AssemblyVersion>
     <FileVersion>$(AssemblyVersion)</FileVersion>
-      <!--for nuget package version, semantic versioning can be used -->
-    <PackageVersion>$(BaseVersion)</PackageVersion>   
     <InformationalVersion>$(PackageVersion)</InformationalVersion> 	
-
+      
+    <!--NuGet package properties -->
+    <PackageVersion>$(BaseVersion)</PackageVersion>   
+    <Authors>Andreas Gruenwald</Authors>
+    <PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ap0llo/utilities-squirrel-build/blob/master/LICENSE</PackageLicenseUrl>
+    <Description>A collection of utility functions for usage in C#/.NET projects</Description>
+  
   </PropertyGroup>
 </Project>
