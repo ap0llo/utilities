@@ -4,3 +4,7 @@ build_script:
 test_script:
 - cmd: .\test.bat
 image: Visual Studio 2017
+
+
+artifacts:
+  - path: .\Build\Release\*\*.nupkg  
