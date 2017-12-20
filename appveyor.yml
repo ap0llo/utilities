@@ -5,6 +5,10 @@ test_script:
 - cmd: .\test.bat
 image: Visual Studio 2017
 
+environment:
+  access_token:
+    secure: VYDHd59hLJyQ7OOH3I1CbRq2ozcKnklfZHH7TLvB0OIJf60pN7BtoY7cRw9glBjp
+
 
 artifacts:
   - path: .\Build\Release\*\*.nupkg  
@@ -16,4 +20,7 @@ deploy:
   skip_symbols : true  
   artifact: /.*\.nupkg/
   on:
-    branch: master  
+    branch: master
+
+on_success:
+  - ps: ./appveyor.onsuccess.ps1
