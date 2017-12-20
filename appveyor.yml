@@ -9,6 +9,7 @@ environment:
   access_token:
     secure: VYDHd59hLJyQ7OOH3I1CbRq2ozcKnklfZHH7TLvB0OIJf60pN7BtoY7cRw9glBjp
 
+skip_tags: true
 
 artifacts:
   - path: .\Build\Release\*\*.nupkg  
