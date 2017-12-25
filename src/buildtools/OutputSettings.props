@@ -29,7 +29,7 @@
     <PackageVersion>$(BaseVersion)</PackageVersion>   
     <Authors>Andreas Gruenwald</Authors>
     <PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/ap0llo/utilities-squirrel-build/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/ap0llo/utilities/blob/master/LICENSE.txt</PackageLicenseUrl>
     <Description>A collection of utility functions for usage in C#/.NET projects</Description>
   
   </PropertyGroup>
