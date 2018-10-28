@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,4 +6,9 @@
     <NoWarn>$(NoWarn),1591</NoWarn>
   </PropertyGroup>
 
+
+  <ItemGroup>
+    <ReferenceAssemblyProjectReference Include="..\Utilities.ReferenceAssemblies\Grynwald.Utilities.ReferenceAssemblies.csproj" />
+  </ItemGroup>
+  
 </Project>
