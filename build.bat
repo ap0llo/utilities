@@ -4,14 +4,16 @@ SET LOGDIRPATH=%~dp0\Build
 SET LOGFILEPATH=%LOGDIRPATH%\build.log
 SET COMMONPARAMETERS=/p:Configuration=Release /M /fl /flp:verbosity=normal;Append;LogFile=%LOGFILEPATH%
 
-if not exist "%LOGDIRPATH%" mkdir "%LOGDIRPATH%"
-if exist "%LOGFILEPATH%" del "%LOGFILEPATH%"
+IF NOT EXIST "%LOGDIRPATH%" mkdir "%LOGDIRPATH%"
+IF EXIST "%LOGFILEPATH%" del "%LOGFILEPATH%"
 
 REM Restore NuGet packages
 CALL %~dp0\msbuild.bat %SOLUTIONPATH% /t:Restore %COMMONPARAMETERS%
-if %errorlevel% neq 0 exit /b %errorlevel%
+IF ERRORLEVEL 1 EXIT /b 1
 
 REM Build
 CALL %~dp0\msbuild.bat %SOLUTIONPATH% /t:Build %COMMONPARAMETERS%  %*
-CALL %~dp0\msbuild.bat %SOLUTIONPATH% /t:Pack %COMMONPARAMETERS% 
+IF ERRORLEVEL 1 EXIT /b 1
 
+CALL %~dp0\msbuild.bat %~dp0\src\Utilities\Grynwald.Utilities.csproj /t:Pack %COMMONPARAMETERS% 
+IF ERRORLEVEL 1 EXIT /b 1

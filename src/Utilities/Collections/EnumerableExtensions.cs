@@ -35,6 +35,8 @@ namespace Grynwald.Utilities.Collections
             return enumerable.Concat(newItem.Yield());
         }
 
+
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NET472))
         /// <summary>
         /// Creates a new <see cref="HashSet{T}"/> with elements copied from the enumerable
         /// using the default equality comparer
@@ -47,6 +49,8 @@ namespace Grynwald.Utilities.Collections
         /// </summary>
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer) =>
             new HashSet<T>(enumerable, comparer);
+
+#endif
 
         /// <summary>
         /// Determines if two sequences contain the same set of elements (in any order)
