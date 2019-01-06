@@ -17,7 +17,7 @@
     -->
     <AppVeyor Condition="'$(AppVeyor)' == ''">false</AppVeyor>
 
-    <BaseVersion>1.1.0</BaseVersion>
+    <BaseVersion>1.2.0</BaseVersion>
     <BaseVersion Condition="$(AppVeyor)">$(APPVEYOR_BUILD_VERSION)</BaseVersion>
 
     <!-- Build version info -->    
