@@ -3,7 +3,7 @@ param(
     [switch]$Minor
 )
 $versionJsonFilePath = Join-Path $PSScriptRoot "..\version.json"
-$preReleaseTag = "-prerelease"
+$preReleaseTag = "-pre"
 
 function Start-Git($command) {
     Invoke-Expression "git $command"
