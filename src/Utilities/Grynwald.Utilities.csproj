@@ -6,9 +6,19 @@
     <NoWarn>$(NoWarn),1591</NoWarn>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- SourceLink (https://github.com/dotnet/sourcelink) settings -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>    
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
 
   <ItemGroup>
     <ReferenceAssemblyProjectReference Include="..\Utilities.ReferenceAssemblies\Grynwald.Utilities.ReferenceAssemblies.csproj" />
   </ItemGroup>
   
+  <!-- Include source link -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-62925-02" PrivateAssets="All" />
+  </ItemGroup>
+
 </Project>
