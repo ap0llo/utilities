@@ -94,6 +94,14 @@ jobs:
       downloadType: single
       artifactName: $(artifactsName)
       downloadPath: $(Build.ArtifactStagingDirectory)
+  - powershell: |
+      Write-Host "Files in staging directory " + $(Build.ArtifactStagingDirectory)
+      $files = Get-ChildItem -Recurse $(Build.ArtifactStagingDirectory)
+      foreach($file in $files)
+      {
+         Write-Host $file.FullName 
+      }
+    displayName: 'List files in staging directory'
   # Upload to MyGet.org
   - task: NuGetCommand@2
     displayName: "Upload package"
