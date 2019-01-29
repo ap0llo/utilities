@@ -1,14 +1,12 @@
 <Project>
 
 	<PropertyGroup>
-		<SrcRootDirectory>$(MSBuildThisFileDirectory)</SrcRootDirectory>
-		<BuildToolsDirectory>$(SrcRootDirectory)buildtools\</BuildToolsDirectory>
 		<LangVersion>7.1</LangVersion>
 	</PropertyGroup>
 
 	
+	<!-- Output paths -->
 	<PropertyGroup>
-		<!-- Output paths -->
 		<BaseOutputPath Condition="'$(BUILD_BINARIESDIRECTORY)' != '' ">$(BUILD_BINARIESDIRECTORY)</BaseOutputPath>
 		<BaseOutputPath Condition="'$(BaseOutputPath)' == '' ">$(MSBuildThisFileDirectory)..\Build\</BaseOutputPath>
 		<BaseOutputPath Condition="!HasTrailingSlash('BaseOutputPath')">$(BaseOutputPath)\</BaseOutputPath>
@@ -20,6 +18,7 @@
 		<PackageReference Include="Nerdbank.GitVersioning" Version="2.3.38" PrivateAssets="all" />
 	</ItemGroup>
 
+	<!--NuGet package properties -->
 	<PropertyGroup>
 		<Authors>Andreas Gruenwald</Authors>
 		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
