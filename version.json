@@ -9,5 +9,10 @@
     "buildNumber": {
       "enabled": false
     }
+  },
+  "release": {
+    "branchName" : "release/v{version}",
+    "firstUnstableTag": "pre",
+    "versionIncrement": "minor"
   }
 }

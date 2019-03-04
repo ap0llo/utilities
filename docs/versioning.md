@@ -7,17 +7,13 @@ in `version.json` using [Nerdbank.GitVersioning](https://github.com/AArnott/Nerd
   master are always marked as pre-release versions (using the `-pre` suffix).
 - Stable versions are built from release branches. Build from release branches
   will have no `-pre` suffix
-- Builds from any other branch will have both the `-prerelease` and the git
+- Builds from any other branch will have both the `-pre` prerelease tag and the git
   commit hash included in the version string
 
-The `Set-Version.ps1` script from the `scripts` folder can be used to create a new
-release branch and update the version on *master*.  The script will:
+To create a new release branch use the [`nbgv` tool](https://www.nuget.org/packages/nbgv/)
+(at least version `3.0.4-beta`):
 
-- read `version.json` to determine the current version of the branch
-  (typically *master*)
-- create a new release branch for version, e.g. *release/v1.0*
-- Remove the pre-release tag from `version.json` on the release branch
-- Increment the version on *master* so builds from that branch will produce
-  pre-release packages for the next version. The next version is either the 
-  next major or minor version, depending on the parameters passed to 
-  `Set-Version.ps1` (either `-Major` or `-Minor`)
+```ps1
+dotnet tool install --global nbgv --version
+nbgv prepare-release
+```
