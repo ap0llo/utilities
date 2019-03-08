@@ -4,7 +4,7 @@ using System.IO;
 namespace Grynwald.Utilities
 {
     /// <summary>
-    /// Extension methods for <see cref="string"/>
+    /// Extension methods for <see cref="String"/>
     /// </summary>
     public static class StringExtensions
     {        
@@ -21,6 +21,9 @@ namespace Grynwald.Utilities
             return stream;
         }
 
+        // Hide Methods from proejcts targeting .NET Core 2.0 or later because for that target,
+        // String.StartsWith(char) and String.EndsWith(char) are built-in
+#if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
         /// <summary>
         /// Determines if the string starts with the specified character
         /// </summary>
@@ -43,6 +46,7 @@ namespace Grynwald.Utilities
             return str.Length > 0 && str[str.Length - 1] == c;
         }
 
+#endif
         /// <summary>
         /// Removes leading and trailing empty lines from the string
         /// </summary>
