@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,8 +35,11 @@ namespace Grynwald.Utilities.Collections
             return enumerable.Concat(newItem.Yield());
         }
 
-
+        // ToHashSet exists in .NET Core 2.0 and .NET Framework 4.7.2
+        // Exclude the method from the reference assembly for these target frameworks
+        // so a project targeting netcoreapp2.0, uses the built-in method
 #if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NET472))
+
         /// <summary>
         /// Creates a new <see cref="HashSet{T}"/> with elements copied from the enumerable
         /// using the default equality comparer
