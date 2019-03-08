@@ -7,7 +7,7 @@ namespace Grynwald.Utilities
     /// Extension methods for <see cref="String"/>
     /// </summary>
     public static class StringExtensions
-    {        
+    {
         /// <summary>
         /// Creates a in-memory stream and writes the string's content to it
         /// </summary>
@@ -21,7 +21,7 @@ namespace Grynwald.Utilities
             return stream;
         }
 
-        // Hide Methods from proejcts targeting .NET Core 2.0 or later because for that target,
+        // Hide Methods from projects targeting .NET Core 2.0 or later because for that target,
         // String.StartsWith(char) and String.EndsWith(char) are built-in
 #if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
         /// <summary>
