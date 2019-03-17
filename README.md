@@ -23,7 +23,18 @@ MarkdownGenerator is a .NET Standard library and can be built using the .NET SDK
   dotnet restore .\src\Utilities.sln
 
   dotnet build .\src\Utilities.sln
+
+  dotnet pack .\src\Utilities.sln
 ```
+
+## Acknowledgments
+
+*Grynwald.Utilities* was made possible through a number of libraries (aside from
+.NET Core and .NET Standard). Thanks to all the people contribution to these projects:
+
+- [Nerdbank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning/)
+- [SourceLink](https://github.com/dotnet/sourcelink)
+- [xUnit](http://xunit.github.io/)
 
 ## Versioning and Branching
 
