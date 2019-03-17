@@ -4,21 +4,24 @@ using System.Collections.Generic;
 
 namespace Grynwald.Utilities.Collections
 {
-	/// <summary>
-	/// Represents a dictionary implemeting a 1:1 mapping of key and value
-	/// which can be addressed in "both directions" ('key' -> 'value' as well as 'value' -> 'key')
-	/// </summary>
-	public class ReversibleDictionary<TKey, TValue> : IReversibleDictionary<TKey, TValue>
+    /// <summary>
+    /// Represents a dictionary implementing a 1:1 mapping of keys and values
+    /// which can be addressed in "both directions" ('key' -> 'value' as well as 'value' -> 'key')
+    /// </summary>
+    /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+    /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+    public class ReversibleDictionary<TKey, TValue> : IReversibleDictionary<TKey, TValue>
 	{        
 		readonly IDictionary<TKey, TValue> m_KeyDictionary = new Dictionary<TKey, TValue>();
 		readonly IDictionary<TValue, TKey> m_ValueDictionary = new Dictionary<TValue, TKey>();
 
 
         /// <summary>
-        /// Gets the reversed dictionary that contains the same items but with key and value swapped
+        /// Gets the reversed dictionary that contains the same items but with key and value swapped.
         /// </summary>
 		public IReversibleDictionary<TValue, TKey> ReversedDictionary { get; }
 
+        /// <inheritDoc />
 		public TValue this[TKey key]
 		{
 			get
@@ -39,12 +42,16 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
+        /// <inheritDoc />
 		public int Count => m_KeyDictionary.Count;
 
+        /// <inheritDoc />
 		public bool IsReadOnly => false;
 
+        /// <inheritDoc />
 		public ICollection<TKey> Keys => m_KeyDictionary.Keys;
 
+        /// <inheritDoc />
 		public ICollection<TValue> Values => m_KeyDictionary.Values;
 
 
@@ -57,8 +64,10 @@ namespace Grynwald.Utilities.Collections
 		}
 
 
+        /// <inheritDoc />
 		public void Add(KeyValuePair<TKey, TValue> item) => Add(item.Key, item.Value);
 
+        /// <inheritDoc />
 		public void Add(TKey key, TValue value)
 		{
 			lock (this)
@@ -73,6 +82,7 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
+        /// <inheritDoc />
 		public void Clear()
 		{
 			lock (this)
@@ -82,16 +92,22 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
+        /// <inheritDoc />
 		public bool Contains(KeyValuePair<TKey, TValue> item) => ContainsKey(item.Key);
 
+        /// <inheritDoc />
 		public bool ContainsKey(TKey key) => m_KeyDictionary.ContainsKey(key);
 
+        /// <inheritDoc />
 		public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) => m_KeyDictionary.CopyTo(array, arrayIndex);
 
+        /// <inheritDoc />
 		public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => m_KeyDictionary.GetEnumerator();
 
+        /// <inheritDoc />
 		public bool Remove(KeyValuePair<TKey, TValue> item) => Remove(item.Key);
 
+        /// <inheritDoc />
 		public bool Remove(TKey key)
 		{
 			lock (this)
@@ -109,9 +125,10 @@ namespace Grynwald.Utilities.Collections
 				}
 			}
 		}
-
+       
 		public bool TryGetValue(TKey key, out TValue value) => m_KeyDictionary.TryGetValue(key, out value);
 
+        /// <inheritDoc />
 		IEnumerator IEnumerable.GetEnumerator() => m_KeyDictionary.GetEnumerator();
 
 

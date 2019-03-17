@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 namespace Grynwald.Utilities
 {
     /// <summary>
-    /// Represents a wildcard expression
+    /// Represents a wildcard expression.
     /// </summary>
     public sealed class Wildcard : IEquatable<Wildcard>
     {
@@ -27,10 +27,13 @@ namespace Grynwald.Utilities
         }
 
 
+        /// <inheritdoc />
         public override int GetHashCode() => StringComparer.Ordinal.GetHashCode(m_Pattern);
 
+        /// <inheritdoc />
         public override bool Equals(object obj) => Equals(obj as Wildcard);
 
+        /// <inheritdoc />
         public bool Equals(Wildcard other)
         {
             if (other == null)
@@ -43,8 +46,17 @@ namespace Grynwald.Utilities
         }
 
         /// <summary>
-        /// Determines whether the wildcard matches the specified input string
+        /// Determines whether the wildcard matches the specified input string.
         /// </summary>
+        /// <example>
+        /// <code language="csharp"><![CDATA[
+        /// var wildcard = new Wildcard("Foo*");
+        ///
+        /// Debug.Assert(wildcard.IsMatch("Foobar"));
+        /// Debug.Assert(!wildcard.IsMatch("Bar"));
+        /// ]]>
+        /// </code>
+        /// </example>
         public bool IsMatch(string value) => m_Regex.IsMatch(value);
         
     }

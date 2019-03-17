@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Data.Common;
 
 namespace Grynwald.Utilities.Data
 {
     /// <summary>
-    /// Extension methods for <see cref="IDbConnection"/>
+    /// Extension methods for <see cref="IDbConnection"/>.
     /// </summary>
     public static class DbConnectionExtensions
     {
         /// <summary>
-        /// Executes the specified query and returns the number of affected rows
+        /// Executes the specified query and returns the number of affected rows.
         /// </summary>
         public static int ExecuteNonQuery(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {
@@ -20,7 +20,7 @@ namespace Grynwald.Utilities.Data
 
         /// <summary>
         /// Executes the specified query and converts the value of the first column of
-        /// the first returned row to the specified type <typeparamref name="T"/>
+        /// the first returned row to the specified type <typeparamref name="T"/>.
         /// </summary>
         public static T ExecuteScalar<T>(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {

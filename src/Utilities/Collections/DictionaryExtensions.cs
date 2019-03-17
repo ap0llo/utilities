@@ -4,21 +4,30 @@ using System.Collections.Generic;
 namespace Grynwald.Utilities.Collections
 {
     /// <summary>
-    /// Extension methods for <see cref="IDictionary{TKey, TValue}"/>
+    /// Extension methods for <see cref="IDictionary{TKey, TValue}"/>.
     /// </summary>
     public static class DictionaryExtensions
     {
 
         /// <summary>
         /// Tries to get the element with the specified key.
-        /// If the dictionary does not contain a matching element, default(TValie) is returned
+        /// If the dictionary does not contain a matching element, <c>default(TValue)</c> is returned
         /// </summary>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        /// <param name="dictionary">The dictionary to retrieve the value from.</param>
+        /// <param name="key">The key to locate in the dictionary.</param>
         public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) => dictionary.GetValueOrDefault(key, default);
 
         /// <summary>
         /// Tries to get the element with the specified key.
-        /// If the dictionary does not contain a matching element, default(TValie) is returned
+        /// If the dictionary does not contain a matching element, the value of <paramref name="defaultValue"/> is returned.
         /// </summary>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        /// <param name="dictionary">The dictionary to retrieve the value from.</param>
+        /// <param name="key">The key to locate in the dictionary.</param>
+        /// <param name="defaultValue">The value to return if the dictionary does not contain an item with the specified key.</param>
         public static TValue GetValueOrDefault<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue)
         {
             return dictionary.ContainsKey(key)
@@ -35,12 +44,31 @@ namespace Grynwald.Utilities.Collections
         /// Tries to get the element with the specified key.
         /// If the dictionary does not contain a matching element, default(TValue) is returned
         /// </summary>
+        /// <remarks>
+        /// This method is not included in the reference assembly for .NET Core 2.0 or later
+        /// because a equivalent extension method, is available there
+        /// and using the built-in method is preferable.
+        /// </remarks>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        /// <param name="dictionary">The dictionary to retrieve the value from.</param>
+        /// <param name="key">The key to locate in the dictionary.</param>
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key) => dictionary.GetValueOrDefault(key, default);
 
         /// <summary>
         /// Tries to get the element with the specified key.
-        /// If the dictionary does not contain a matching element, default(TValie) is returned
+        /// If the dictionary does not contain a matching element, <c>default(TValue)</c> is returned
         /// </summary>
+        /// <remarks>
+        /// This method is not included in the reference assembly for .NET Core 2.0 or later
+        /// because a equivalent extension method, is available there
+        /// and using the built-in method is preferable.
+        /// </remarks>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        /// <param name="dictionary">The dictionary to retrieve the value from.</param>
+        /// <param name="key">The key to locate in the dictionary.</param>
+        /// <param name="defaultValue">The value to return if the dictionary does not contain an item with the specified key.</param>
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue)
         {
             return dictionary.ContainsKey(key)
@@ -55,6 +83,8 @@ namespace Grynwald.Utilities.Collections
         /// If no matching element is found, a value is created using the specified factory function
         /// and added to the dictionary
         /// </summary>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary to get the value from</param>
         /// <param name="key">The key to search for</param>
         /// <param name="factory">The factory function to create a new value for the case that no value can be found</param>

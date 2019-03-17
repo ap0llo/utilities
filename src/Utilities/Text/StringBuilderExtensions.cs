@@ -5,7 +5,7 @@ using System.Text;
 namespace Grynwald.Utilities.Text
 {
     /// <summary>
-    /// Extension methods for <see cref="StringBuilder"/>
+    /// Extension methods for <see cref="StringBuilder"/>.
     /// </summary>
     public static class StringBuilderExtensions
     {
@@ -14,7 +14,7 @@ namespace Grynwald.Utilities.Text
 #if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
@@ -37,7 +37,7 @@ namespace Grynwald.Utilities.Text
         }
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
@@ -59,7 +59,7 @@ namespace Grynwald.Utilities.Text
         }
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
@@ -81,7 +81,7 @@ namespace Grynwald.Utilities.Text
         }
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
@@ -103,7 +103,7 @@ namespace Grynwald.Utilities.Text
         }
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
@@ -125,7 +125,7 @@ namespace Grynwald.Utilities.Text
         }
 
         /// <summary>
-        /// Appends the the members of a collection, separated by the specified separator.
+        /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
         /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This

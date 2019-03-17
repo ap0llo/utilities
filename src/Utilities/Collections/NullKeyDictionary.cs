@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +6,10 @@ using System.Linq;
 namespace Grynwald.Utilities.Collections
 {
     /// <summary>
-    /// Implementation of <see cref="IDictionary{TKey, TValue}"/> that allows using null as key
-    /// </summary>   
+    /// Implementation of <see cref="IDictionary{TKey, TValue}"/> that allows using <c>null</c> as key.
+    /// </summary>
+    /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+    /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
     public class NullKeyDictionary<TKey, TValue> : IDictionary<TKey, TValue>
     {
         bool m_ContainsNull = false;
@@ -15,7 +17,7 @@ namespace Grynwald.Utilities.Collections
         readonly IDictionary<TKey, TValue> m_InnerDictionary;
         readonly IEqualityComparer<TValue> m_ValueComparer = EqualityComparer<TValue>.Default;
 
-
+        /// <inheritDoc />
         public TValue this[TKey key]
         {
             get
@@ -43,6 +45,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
+        /// <inheritDoc />
         public ICollection<TKey> Keys
         {
             get
@@ -54,6 +57,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
+        /// <inheritDoc />
         public ICollection<TValue> Values
         {
             get
@@ -65,24 +69,27 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
+        /// <inheritDoc />
         public int Count => m_InnerDictionary.Count + (m_ContainsNull ? 1 : 0);
 
+        /// <inheritDoc />
         public bool IsReadOnly => m_InnerDictionary.IsReadOnly;
 
         
         /// <summary>
-        /// Initiaizes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/>
+        /// Initializes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/>.
         /// </summary>
         public NullKeyDictionary() =>
             m_InnerDictionary = new Dictionary<TKey, TValue>();
 
         /// <summary>
-        /// Initiaizes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/> using the specified key comprarer
+        /// Initializes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/> using the specified key comparer.
         /// </summary>
         public NullKeyDictionary(IEqualityComparer<TKey> keyComparer) =>
             m_InnerDictionary = new Dictionary<TKey, TValue>(keyComparer);
 
 
+        /// <inheritDoc />
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
             IEnumerable<KeyValuePair<TKey, TValue>> enumerable = m_InnerDictionary;
@@ -95,10 +102,13 @@ namespace Grynwald.Utilities.Collections
             return enumerable.GetEnumerator();            
         }
 
+        /// <inheritDoc />
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
+        /// <inheritDoc />
         public void Add(KeyValuePair<TKey, TValue> item) => Add(item.Key, item.Value);
 
+        /// <inheritDoc />
         public void Clear()
         {
             m_NullValue = default(TValue);
@@ -106,18 +116,23 @@ namespace Grynwald.Utilities.Collections
             m_InnerDictionary.Clear();
         }
 
+        /// <inheritDoc />
         public bool Contains(KeyValuePair<TKey, TValue> item) =>
             ContainsKey(item.Key) && m_ValueComparer.Equals(item.Value, this[item.Key]);
 
+        /// <inheritDoc />
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) =>
             throw new NotSupportedException();
 
+        /// <inheritDoc />
         public bool Remove(KeyValuePair<TKey, TValue> item) =>
             throw new NotSupportedException();
 
+        /// <inheritDoc />
         public bool ContainsKey(TKey key) =>
             key == null ? m_ContainsNull : m_InnerDictionary.ContainsKey(key);
 
+        /// <inheritDoc />
         public void Add(TKey key, TValue value)
         {
             if (key == null)
@@ -136,6 +151,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
+        /// <inheritDoc />
         public bool Remove(TKey key)
         {
             if (key == null)

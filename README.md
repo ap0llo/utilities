@@ -15,6 +15,10 @@
 - Prerelease builds are available on [MyGet](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities)
 - Release versions are available on [NuGet.org](https://www.nuget.org/packages/Grynwald.Utilities)
 
+## API Reference
+
+For documentation of the types in this libary, have a look at the [API docs](docs/api/Grynwald/Utilities/Namespace.md).
+
 ## Building from source
 
 MarkdownGenerator is a .NET Standard library and can be built using the .NET SDK (tested with Visual Studio 2017 15.9)
