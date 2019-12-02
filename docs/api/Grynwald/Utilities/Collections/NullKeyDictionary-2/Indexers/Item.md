@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Item Indexer
+﻿# NullKeyDictionary\<TKey, TValue\>.Item Indexer
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public TValue this[TKey key] { get; set; }

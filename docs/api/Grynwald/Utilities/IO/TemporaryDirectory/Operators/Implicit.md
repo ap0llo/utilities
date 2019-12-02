@@ -1,8 +1,8 @@
-# TemporaryDirectory.Implicit Operator
+﻿# TemporaryDirectory.Implicit Operator
 
-**Declaring Type:** [TemporaryDirectory](../Type.md)
+**Declaring Type:** [TemporaryDirectory](../index.md)
 
-Converts the temporary directory to a string (using the [FullName](../Properties/FullName.md) property as value).
+Converts the temporary directory to a string (using the [FullName](../properties/FullName.md) property as value).
 
 ```csharp
 public static implicit operator string(TemporaryDirectory instance);
@@ -10,7 +10,7 @@ public static implicit operator string(TemporaryDirectory instance);
 
 ## Parameters
 
-`instance`  [TemporaryDirectory](../Type.md)
+`instance`  [TemporaryDirectory](../index.md)
 
 ## Returns
 

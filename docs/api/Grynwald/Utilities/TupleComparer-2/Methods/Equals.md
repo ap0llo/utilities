@@ -1,6 +1,6 @@
-# TupleComparer\<T1, T2\>.Equals Method
+﻿# TupleComparer\<T1, T2\>.Equals Method
 
-**Declaring Type:** [TupleComparer\<T1, T2\>](../Type.md)
+**Declaring Type:** [TupleComparer\<T1, T2\>](../index.md)
 
 ```csharp
 public bool Equals(ValueTuple<T1, T2> x, ValueTuple<T1, T2> y);

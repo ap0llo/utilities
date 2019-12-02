@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.Clear Method
+﻿# ReversibleDictionary\<TKey, TValue\>.Clear Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public void Clear();

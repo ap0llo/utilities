@@ -1,6 +1,6 @@
-# ConsoleEx.WriteLine Method
+﻿# ConsoleEx.WriteLine Method
 
-**Declaring Type:** [ConsoleEx](../Type.md)
+**Declaring Type:** [ConsoleEx](../index.md)
 
 ## Overloads
 

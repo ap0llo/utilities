@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.ContainsKey Method
+﻿# ReversibleDictionary\<TKey, TValue\>.ContainsKey Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool ContainsKey(TKey key);

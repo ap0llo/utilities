@@ -1,6 +1,6 @@
-# Wildcard.IsMatch Method
+﻿# Wildcard.IsMatch Method
 
-**Declaring Type:** [Wildcard](../Type.md)
+**Declaring Type:** [Wildcard](../index.md)
 
 Determines whether the wildcard matches the specified input string.
 

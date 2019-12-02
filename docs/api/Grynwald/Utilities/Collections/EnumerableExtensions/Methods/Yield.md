@@ -1,6 +1,6 @@
-# EnumerableExtensions.Yield Method
+﻿# EnumerableExtensions.Yield Method
 
-**Declaring Type:** [EnumerableExtensions](../Type.md)
+**Declaring Type:** [EnumerableExtensions](../index.md)
 
 Returns a new enumerable containing the specified item.
 

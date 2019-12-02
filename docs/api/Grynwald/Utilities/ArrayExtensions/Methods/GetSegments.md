@@ -1,6 +1,6 @@
-# ArrayExtensions.GetSegments Method
+﻿# ArrayExtensions.GetSegments Method
 
-**Declaring Type:** [ArrayExtensions](../Type.md)
+**Declaring Type:** [ArrayExtensions](../index.md)
 
 Divides the array into multiple segments with at most `maxSegmentSize` elements in each segment.
 
@@ -36,7 +36,7 @@ This method is implemented using deferred execution. The segments are not create
 
 IEnumerable\<ArraySegment\<T\>\>
 
-Returns an enumerable of (non\-overlapping) ArraySegment\<T\> structures             each representing a section of the underlying array.
+Returns an enumerable of (non\-overlapping) ArraySegment\<T\> structures each representing a section of the underlying array.
 
 ## See Also
 

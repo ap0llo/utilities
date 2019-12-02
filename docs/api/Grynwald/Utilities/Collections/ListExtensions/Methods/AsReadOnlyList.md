@@ -1,6 +1,6 @@
-# ListExtensions.AsReadOnlyList Method
+﻿# ListExtensions.AsReadOnlyList Method
 
-**Declaring Type:** [ListExtensions](../Type.md)
+**Declaring Type:** [ListExtensions](../index.md)
 
 Returns the list as IReadOnlyList\<T\>.
 
@@ -22,7 +22,7 @@ The list to cast to IReadOnlyList\<T\>.
 
 ## Remarks
 
-Converts the specified list to a IReadOnlyList\<T\>.              As List\<T\> already implements this interface, no new instance              is created and the original instance is returned. Thus this method is equivalent to a cast,              but might be easier to write and read in some situations as the generic type parameters              are inferred automatically.
+Converts the specified list to a IReadOnlyList\<T\>. As List\<T\> already implements this interface, no new instance is created and the original instance is returned. Thus this method is equivalent to a cast, but might be easier to write and read in some situations as the generic type parameters are inferred automatically.
 
 ## Returns
 
@@ -32,7 +32,7 @@ Returns `list` cast to IReadOnlyList\<T\>.
 
 ## Example
 
-Calling `AsReadOnlyList` is equivalent to using a cast but the type parameter              is inferred by the compiler as illustrated by the sample below.
+Calling `AsReadOnlyList` is equivalent to using a cast but the type parameter is inferred by the compiler as illustrated by the sample below.
 
 ```csharp
 public void Example(List<string> list)

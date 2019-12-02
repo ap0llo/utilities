@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Remove Method
+﻿# NullKeyDictionary\<TKey, TValue\>.Remove Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ## Overloads
 

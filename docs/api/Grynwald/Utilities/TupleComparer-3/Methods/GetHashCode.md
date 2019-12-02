@@ -1,6 +1,6 @@
-# TupleComparer\<T1, T2, T3\>.GetHashCode Method
+﻿# TupleComparer\<T1, T2, T3\>.GetHashCode Method
 
-**Declaring Type:** [TupleComparer\<T1, T2, T3\>](../Type.md)
+**Declaring Type:** [TupleComparer\<T1, T2, T3\>](../index.md)
 
 ```csharp
 public int GetHashCode(ValueTuple<T1, T2, T3> obj);

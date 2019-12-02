@@ -1,6 +1,6 @@
-# TemporaryDirectory.Dispose Method
+﻿# TemporaryDirectory.Dispose Method
 
-**Declaring Type:** [TemporaryDirectory](../Type.md)
+**Declaring Type:** [TemporaryDirectory](../index.md)
 
 Deletes the temporary directory.
 

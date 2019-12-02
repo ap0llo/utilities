@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.ReversedDictionary Property
+﻿# ReversibleDictionary\<TKey, TValue\>.ReversedDictionary Property
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 Gets the reversed dictionary that contains the same items but with key and value swapped.
 

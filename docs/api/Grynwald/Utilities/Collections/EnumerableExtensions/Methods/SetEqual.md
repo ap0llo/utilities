@@ -1,6 +1,6 @@
-# EnumerableExtensions.SetEqual Method
+﻿# EnumerableExtensions.SetEqual Method
 
-**Declaring Type:** [EnumerableExtensions](../Type.md)
+**Declaring Type:** [EnumerableExtensions](../index.md)
 
 Determines if two sequences contain the same set of elements (in any order)
 

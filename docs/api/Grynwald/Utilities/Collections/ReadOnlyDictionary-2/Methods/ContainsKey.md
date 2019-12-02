@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.ContainsKey Method
+﻿# ReadOnlyDictionary\<TKey, TValue\>.ContainsKey Method
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool ContainsKey(TKey key);

@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.GetEnumerator Method
+﻿# NullKeyDictionary\<TKey, TValue\>.GetEnumerator Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();

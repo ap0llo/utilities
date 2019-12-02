@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.TryGetValue Method
+﻿# ReadOnlyDictionary\<TKey, TValue\>.TryGetValue Method
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool TryGetValue(TKey key, TValue& value);

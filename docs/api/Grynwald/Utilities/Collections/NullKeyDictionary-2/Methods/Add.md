@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Add Method
+﻿# NullKeyDictionary\<TKey, TValue\>.Add Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ## Overloads
 

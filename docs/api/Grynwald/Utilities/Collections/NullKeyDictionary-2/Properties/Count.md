@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Count Property
+﻿# NullKeyDictionary\<TKey, TValue\>.Count Property
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public int Count { get; }

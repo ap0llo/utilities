@@ -1,6 +1,6 @@
-# Wildcard.GetHashCode Method
+﻿# Wildcard.GetHashCode Method
 
-**Declaring Type:** [Wildcard](../Type.md)
+**Declaring Type:** [Wildcard](../index.md)
 
 ```csharp
 public int GetHashCode();

@@ -1,6 +1,6 @@
-# EnumerableExtensions.JoinToString Method
+﻿# EnumerableExtensions.JoinToString Method
 
-**Declaring Type:** [EnumerableExtensions](../Type.md)
+**Declaring Type:** [EnumerableExtensions](../index.md)
 
 ## Overloads
 

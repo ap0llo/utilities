@@ -1,6 +1,6 @@
-# ReadOnlyCollectionAdapter\<T\>.GetEnumerator Method
+﻿# ReadOnlyCollectionAdapter\<T\>.GetEnumerator Method
 
-**Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../Type.md)
+**Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../index.md)
 
 ```csharp
 public IEnumerator<T> GetEnumerator();

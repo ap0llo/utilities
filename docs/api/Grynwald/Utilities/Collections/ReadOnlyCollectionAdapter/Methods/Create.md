@@ -1,6 +1,6 @@
-# ReadOnlyCollectionAdapter.Create Method
+﻿# ReadOnlyCollectionAdapter.Create Method
 
-**Declaring Type:** [ReadOnlyCollectionAdapter](../Type.md)
+**Declaring Type:** [ReadOnlyCollectionAdapter](../index.md)
 
 Creates a new read\-only wrapper from the specified collection.
 
@@ -24,7 +24,7 @@ The collection to wrap in a read\-only adapter.
 
 ReadOnlyCollectionAdapter\<T\>
 
-Returns a new instance of [ReadOnlyCollectionAdapter\<T\>](../../ReadOnlyCollectionAdapter-1/Type.md) wrapping the specified instance.
+Returns a new instance of [ReadOnlyCollectionAdapter\<T\>](../../ReadOnlyCollectionAdapter-1/index.md) wrapping the specified instance.
 
 ___
 

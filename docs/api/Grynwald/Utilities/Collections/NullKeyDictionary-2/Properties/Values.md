@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Values Property
+﻿# NullKeyDictionary\<TKey, TValue\>.Values Property
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public ICollection<TValue> Values { get; }

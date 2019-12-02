@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.CopyTo Method
+﻿# ReversibleDictionary\<TKey, TValue\>.CopyTo Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex);

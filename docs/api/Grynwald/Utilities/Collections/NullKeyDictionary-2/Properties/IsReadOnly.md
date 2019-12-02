@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.IsReadOnly Property
+﻿# NullKeyDictionary\<TKey, TValue\>.IsReadOnly Property
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool IsReadOnly { get; }

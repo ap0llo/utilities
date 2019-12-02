@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.Count Property
+﻿# ReadOnlyDictionary\<TKey, TValue\>.Count Property
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public int Count { get; }

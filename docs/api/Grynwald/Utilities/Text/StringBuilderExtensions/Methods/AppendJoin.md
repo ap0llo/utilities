@@ -1,6 +1,6 @@
-# StringBuilderExtensions.AppendJoin Method
+﻿# StringBuilderExtensions.AppendJoin Method
 
-**Declaring Type:** [StringBuilderExtensions](../Type.md)
+**Declaring Type:** [StringBuilderExtensions](../index.md)
 
 ## Overloads
 
@@ -18,6 +18,8 @@
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, object[] values);
 ```
 
@@ -37,9 +39,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 
@@ -52,6 +54,8 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, string[] values);
 ```
 
@@ -71,9 +75,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 
@@ -86,6 +90,8 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, object[] values);
 ```
 
@@ -105,9 +111,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 
@@ -120,6 +126,8 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, string[] values);
 ```
 
@@ -139,9 +147,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 
@@ -154,6 +162,8 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, char separator, IEnumerable<T> values);
 ```
 
@@ -177,9 +187,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 
@@ -192,6 +202,8 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values);
 ```
 
@@ -217,9 +229,9 @@ The values to concatenate.
 
 ### Remarks
 
-AppendJoin() was added to StringBuilder in .NET Core 2.0. This             extension method makes it available on earlier versions and to projects             targeting .NET Standard or .NET Framework.
+AppendJoin() was added to StringBuilder in .NET Core 2.0 \/ .NET Standard 2.1. This extension method makes it available on earlier versions and to projects targeting .NET Standard 2.0 or .NET Framework.
 
-This method is excluded from the reference assembly for .NET Core 2.0 so projects targeting this will use the built\-in method.
+This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so projects targeting this will use the built\-in method.
 
 ### Returns
 

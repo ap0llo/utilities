@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.Values Property
+﻿# ReadOnlyDictionary\<TKey, TValue\>.Values Property
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public IEnumerable<TValue> Values { get; }

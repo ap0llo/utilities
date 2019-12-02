@@ -1,6 +1,6 @@
-# DbConnectionExtensions.ExecuteScalar Method
+﻿# DbConnectionExtensions.ExecuteScalar Method
 
-**Declaring Type:** [DbConnectionExtensions](../Type.md)
+**Declaring Type:** [DbConnectionExtensions](../index.md)
 
 Executes the specified query and converts the value of the first column of the first returned row to the specified type `T`.
 

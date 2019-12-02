@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Contains Method
+﻿# NullKeyDictionary\<TKey, TValue\>.Contains Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool Contains(KeyValuePair<TKey, TValue> item);

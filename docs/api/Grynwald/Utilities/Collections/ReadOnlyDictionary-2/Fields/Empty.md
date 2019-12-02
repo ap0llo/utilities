@@ -1,8 +1,8 @@
-# ReadOnlyDictionary\<TKey, TValue\>.Empty Field
+﻿# ReadOnlyDictionary\<TKey, TValue\>.Empty Field
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
-The singleton instance of [ReadOnlyDictionary\<T1, T2\>](../Type.md)
+The singleton instance of [ReadOnlyDictionary\<T1, T2\>](../index.md)
 
 ```csharp
 public static IReadOnlyDictionary<TKey, TValue> Empty;

@@ -1,6 +1,6 @@
-# DbConnectionExtensions.ExecuteNonQuery Method
+﻿# DbConnectionExtensions.ExecuteNonQuery Method
 
-**Declaring Type:** [DbConnectionExtensions](../Type.md)
+**Declaring Type:** [DbConnectionExtensions](../index.md)
 
 Executes the specified query and returns the number of affected rows.
 

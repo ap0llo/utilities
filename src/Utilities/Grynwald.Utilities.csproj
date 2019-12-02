@@ -21,4 +21,19 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-62925-02" PrivateAssets="All" />
   </ItemGroup>
 
+  <!-- InheritDoc -->
+  <ItemGroup>
+    <PackageReference Include="SauceControl.InheritDoc" Version="0.3.0" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+  </ItemGroup>
+
+  <!-- MdDocs (generates API Reference docs)-->
+  <PropertyGroup>
+    <ApiReferenceDocumentationOutputPath>$(MSBuildThisFileDirectory)..\..\docs\api\</ApiReferenceDocumentationOutputPath>
+    <GenerateApiReferenceDocumentationOnBuild>true</GenerateApiReferenceDocumentationOnBuild>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Grynwald.MdDocs.MSBuild" Version="0.2.46" PrivateAssets="all" />
+  </ItemGroup>
+
 </Project>

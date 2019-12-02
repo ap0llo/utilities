@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.TryGetValue Method
+﻿# NullKeyDictionary\<TKey, TValue\>.TryGetValue Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool TryGetValue(TKey key, TValue& value);

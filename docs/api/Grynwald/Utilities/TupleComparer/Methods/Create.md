@@ -1,6 +1,6 @@
-# TupleComparer.Create Method
+﻿# TupleComparer.Create Method
 
-**Declaring Type:** [TupleComparer](../Type.md)
+**Declaring Type:** [TupleComparer](../index.md)
 
 ## Overloads
 
@@ -49,11 +49,11 @@ The comparer to use for comparison of the tuple's third item.
 
 TupleComparer\<T1, T2, T3\>
 
-Returns a new instance of [TupleComparer\<T1, T2, T3\>](../../TupleComparer-3/Type.md) with the specified comparers.
+Returns a new instance of [TupleComparer\<T1, T2, T3\>](../../TupleComparer-3/index.md) with the specified comparers.
 
 ### See Also
 
-- [TupleComparer(IEqualityComparer\<T1\>, IEqualityComparer\<T2\>, IEqualityComparer\<T3\>)](../../TupleComparer-3/Constructors.md)
+- [TupleComparer(IEqualityComparer\<T1\>, IEqualityComparer\<T2\>, IEqualityComparer\<T3\>)](../../TupleComparer-3/constructors/index.md)
 
 ## Create\<T1, T2\>(IEqualityComparer\<T1\>, IEqualityComparer\<T2\>)
 
@@ -87,11 +87,11 @@ The comparer to use for comparison of the tuple's second item.
 
 TupleComparer\<T1, T2\>
 
-Returns a new instance of [TupleComparer\<T1, T2\>](../../TupleComparer-2/Type.md) with the specified comparers.
+Returns a new instance of [TupleComparer\<T1, T2\>](../../TupleComparer-2/index.md) with the specified comparers.
 
 ### See Also
 
-- [TupleComparer(IEqualityComparer\<T1\>, IEqualityComparer\<T2\>)](../../TupleComparer-2/Constructors.md)
+- [TupleComparer(IEqualityComparer\<T1\>, IEqualityComparer\<T2\>)](../../TupleComparer-2/constructors/index.md)
 
 ___
 

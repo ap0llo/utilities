@@ -1,6 +1,6 @@
-# ReadOnlyCollectionAdapter\<T\>.Count Property
+﻿# ReadOnlyCollectionAdapter\<T\>.Count Property
 
-**Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../Type.md)
+**Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../index.md)
 
 ```csharp
 public int Count { get; }

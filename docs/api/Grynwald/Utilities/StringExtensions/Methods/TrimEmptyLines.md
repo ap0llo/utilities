@@ -1,6 +1,6 @@
-# StringExtensions.TrimEmptyLines Method
+﻿# StringExtensions.TrimEmptyLines Method
 
-**Declaring Type:** [StringExtensions](../Type.md)
+**Declaring Type:** [StringExtensions](../index.md)
 
 Removes leading and trailing empty lines from the string.
 

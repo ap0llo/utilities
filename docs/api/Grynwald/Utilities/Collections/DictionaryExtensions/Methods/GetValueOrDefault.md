@@ -1,6 +1,6 @@
-# DictionaryExtensions.GetValueOrDefault Method
+﻿# DictionaryExtensions.GetValueOrDefault Method
 
-**Declaring Type:** [DictionaryExtensions](../Type.md)
+**Declaring Type:** [DictionaryExtensions](../index.md)
 
 ## Overloads
 
@@ -84,6 +84,8 @@ TValue
 Tries to get the element with the specified key. If the dictionary does not contain a matching element, default(TValue) is returned
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key);
 ```
 
@@ -109,7 +111,10 @@ The key to locate in the dictionary.
 
 ### Remarks
 
-This method is not included in the reference assembly for .NET Core 2.0 or later because a equivalent extension method, is available there and using the built\-in method is preferable.
+This method is not included in the reference assembly for the following frameworks because a equivalent extension method, is available there and using the built\-in method is preferable.
+
+- .NET Core 2.0 or later
+- .NET Standard 2.1 or later
 
 ### Returns
 
@@ -120,6 +125,8 @@ TValue
 Tries to get the element with the specified key. If the dictionary does not contain a matching element, `default(TValue)` is returned
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue);
 ```
 
@@ -149,7 +156,10 @@ The value to return if the dictionary does not contain an item with the specifie
 
 ### Remarks
 
-This method is not included in the reference assembly for .NET Core 2.0 or later because a equivalent extension method, is available there and using the built\-in method is preferable.
+This method is not included in the reference assembly for the following frameworks because a equivalent extension method, is available there and using the built\-in method is preferrable.
+
+- .NET Core 2.0 or later
+- .NET Standard 2.1 or later
 
 ### Returns
 

@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.Item Indexer
+﻿# ReadOnlyDictionary\<TKey, TValue\>.Item Indexer
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public TValue this[TKey key] { get; }

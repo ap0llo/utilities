@@ -1,6 +1,6 @@
-# TemporaryDirectory.FullName Property
+﻿# TemporaryDirectory.FullName Property
 
-**Declaring Type:** [TemporaryDirectory](../Type.md)
+**Declaring Type:** [TemporaryDirectory](../index.md)
 
 The temporary directory's full path.
 

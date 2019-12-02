@@ -1,6 +1,6 @@
-# EnumerableExtensions.Concat Method
+﻿# EnumerableExtensions.Concat Method
 
-**Declaring Type:** [EnumerableExtensions](../Type.md)
+**Declaring Type:** [EnumerableExtensions](../index.md)
 
 Adds the specified item at the end of the enumerable.
 

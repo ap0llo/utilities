@@ -1,6 +1,6 @@
-# ReadOnlyDictionary\<TKey, TValue\>.GetEnumerator Method
+﻿# ReadOnlyDictionary\<TKey, TValue\>.GetEnumerator Method
 
-**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();

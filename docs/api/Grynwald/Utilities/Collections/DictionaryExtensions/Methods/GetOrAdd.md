@@ -1,6 +1,6 @@
-# DictionaryExtensions.GetOrAdd Method
+﻿# DictionaryExtensions.GetOrAdd Method
 
-**Declaring Type:** [DictionaryExtensions](../Type.md)
+**Declaring Type:** [DictionaryExtensions](../index.md)
 
 Tries to get the element with the specified key from the dictionary. If no matching element is found, a value is created using the specified factory function and added to the dictionary
 

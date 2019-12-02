@@ -1,6 +1,6 @@
-# Wildcard.Equals Method
+﻿# Wildcard.Equals Method
 
-**Declaring Type:** [Wildcard](../Type.md)
+**Declaring Type:** [Wildcard](../index.md)
 
 ## Overloads
 
@@ -31,7 +31,7 @@ public bool Equals(Wildcard other);
 
 ### Parameters
 
-`other`  [Wildcard](../Type.md)
+`other`  [Wildcard](../index.md)
 
 ### Returns
 

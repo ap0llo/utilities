@@ -1,6 +1,6 @@
-# StringExtensions.ToStream Method
+﻿# StringExtensions.ToStream Method
 
-**Declaring Type:** [StringExtensions](../Type.md)
+**Declaring Type:** [StringExtensions](../index.md)
 
 Creates a in\-memory stream and writes the string's content to it.
 

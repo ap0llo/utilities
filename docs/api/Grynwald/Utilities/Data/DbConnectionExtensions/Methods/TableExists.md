@@ -1,6 +1,6 @@
-# DbConnectionExtensions.TableExists Method
+﻿# DbConnectionExtensions.TableExists Method
 
-**Declaring Type:** [DbConnectionExtensions](../Type.md)
+**Declaring Type:** [DbConnectionExtensions](../index.md)
 
 Determines if a table with the specified name exists in the underlying database
 

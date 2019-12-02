@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.GetEnumerator Method
+﻿# ReversibleDictionary\<TKey, TValue\>.GetEnumerator Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();

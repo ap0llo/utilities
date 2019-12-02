@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.TryGetValue Method
+﻿# ReversibleDictionary\<TKey, TValue\>.TryGetValue Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public bool TryGetValue(TKey key, TValue& value);

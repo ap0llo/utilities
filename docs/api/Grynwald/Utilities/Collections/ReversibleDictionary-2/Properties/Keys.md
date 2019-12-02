@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.Keys Property
+﻿# ReversibleDictionary\<TKey, TValue\>.Keys Property
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public ICollection<TKey> Keys { get; }

@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.Add Method
+﻿# ReversibleDictionary\<TKey, TValue\>.Add Method
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ## Overloads
 

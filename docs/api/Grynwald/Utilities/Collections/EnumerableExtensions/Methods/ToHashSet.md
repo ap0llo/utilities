@@ -1,19 +1,22 @@
-# EnumerableExtensions.ToHashSet Method
+﻿# EnumerableExtensions.ToHashSet Method
 
-**Declaring Type:** [EnumerableExtensions](../Type.md)
+**Declaring Type:** [EnumerableExtensions](../index.md)
 
 ## Overloads
 
-| Signature                                                                                              | Description                                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| [ToHashSet\<T\>(IEnumerable\<T\>)](#tohashsettienumerablet)                                            | Creates a new HashSet\<T\> with elements copied from the enumerable             using the default equality comparer.   |
-| [ToHashSet\<T\>(IEnumerable\<T\>, IEqualityComparer\<T\>)](#tohashsettienumerablet-iequalitycomparert) | Creates a new HashSet\<T\> with elements copied from the enumerable             using the specified equality comparer. |
+| Signature                                                                                              | Description                                                                                                |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| [ToHashSet\<T\>(IEnumerable\<T\>)](#tohashsettienumerablet)                                            | Creates a new HashSet\<T\> with elements copied from the enumerable using the default equality comparer.   |
+| [ToHashSet\<T\>(IEnumerable\<T\>, IEqualityComparer\<T\>)](#tohashsettienumerablet-iequalitycomparert) | Creates a new HashSet\<T\> with elements copied from the enumerable using the specified equality comparer. |
 
 ## ToHashSet\<T\>(IEnumerable\<T\>)
 
-Creates a new HashSet\<T\> with elements copied from the enumerable             using the default equality comparer.
+Creates a new HashSet\<T\> with elements copied from the enumerable using the default equality comparer.
 
 ```csharp
+[HiddenFromReferenceAssembly("net472")]
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable);
 ```
 
@@ -31,7 +34,11 @@ The collection of items to copy to the set.
 
 ### Remarks
 
-This method is not included in the reference assemblies for .NET Core 2.0 or later and .NET Framework 4.7.2 or later because a equivalent extension method, are available there and using the built\-in method is preferable.
+This method is not included in the reference assembly for the following frameworks because a equivalent extension method, is available there and using the built\-in method is preferable:
+
+- .NET Core 2.0 or later
+- .NET Framework 4.7.2 or later
+- .NET Standard 2.1 or later
 
 ### Returns
 
@@ -39,9 +46,12 @@ HashSet\<T\>
 
 ## ToHashSet\<T\>(IEnumerable\<T\>, IEqualityComparer\<T\>)
 
-Creates a new HashSet\<T\> with elements copied from the enumerable             using the specified equality comparer.
+Creates a new HashSet\<T\> with elements copied from the enumerable using the specified equality comparer.
 
 ```csharp
+[HiddenFromReferenceAssembly("net472")]
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer);
 ```
 
@@ -63,7 +73,11 @@ The comparer to use for creating the set.
 
 ### Remarks
 
-This method is not included in the reference assemblies for .NET Core 2.0 or later and .NET Framework 4.7.2 or later because a equivalent extension method, are available there and using the built\-in method is preferable.
+This method is not included in the reference assembly for the following frameworks because a equivalent extension method, is available there and using the built\-in method is preferable:
+
+- .NET Core 2.0 or later
+- .NET Framework 4.7.2 or later
+- .NET Standard 2.1 or later
 
 ### Returns
 

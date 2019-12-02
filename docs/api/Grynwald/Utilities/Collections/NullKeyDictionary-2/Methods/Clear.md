@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.Clear Method
+﻿# NullKeyDictionary\<TKey, TValue\>.Clear Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public void Clear();

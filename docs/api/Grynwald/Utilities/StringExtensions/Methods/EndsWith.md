@@ -1,10 +1,12 @@
-# StringExtensions.EndsWith Method
+﻿# StringExtensions.EndsWith Method
 
-**Declaring Type:** [StringExtensions](../Type.md)
+**Declaring Type:** [StringExtensions](../index.md)
 
 Determines if the string ends with the specified character.
 
 ```csharp
+[HiddenFromReferenceAssembly("netcoreapp2.0")]
+[HiddenFromReferenceAssembly("netstandard2.1")]
 public static bool EndsWith(this string str, char c);
 ```
 
@@ -20,7 +22,10 @@ The character to compare to the string's last character.
 
 ## Remarks
 
-This method is not included in the reference assembly for .NET Core 2.0 or later because a corresponding overload of the String class, is available there and using the built\-in method is preferable.
+This method is not included in the reference assembly for the following frameworks because a equivalent extension method, is available there and using the built\-in method is preferable:
+
+- .NET Core 2.0 or later
+- .NET Standard 2.1 or later
 
 ## Returns
 

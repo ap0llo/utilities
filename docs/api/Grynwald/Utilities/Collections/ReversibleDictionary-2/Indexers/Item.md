@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.Item Indexer
+﻿# ReversibleDictionary\<TKey, TValue\>.Item Indexer
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public TValue this[TKey key] { get; set; }

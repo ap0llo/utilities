@@ -1,6 +1,6 @@
-# NullKeyDictionary\<TKey, TValue\>.CopyTo Method
+﻿# NullKeyDictionary\<TKey, TValue\>.CopyTo Method
 
-**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex);

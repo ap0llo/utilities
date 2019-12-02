@@ -1,6 +1,6 @@
-# ReversibleDictionary\<TKey, TValue\>.Count Property
+﻿# ReversibleDictionary\<TKey, TValue\>.Count Property
 
-**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../Type.md)
+**Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
 public int Count { get; }
