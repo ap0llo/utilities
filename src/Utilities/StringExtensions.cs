@@ -41,6 +41,7 @@ namespace Grynwald.Utilities
         /// <param name="str">The string which's first character to check.</param>
         /// <param name="c">The character to compare to the string's first character.</param>
         /// <returns>Returns true if the string has at least one character and the first character matches <paramref name="c"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static bool StartsWith(this string str, char c)
         {
             if (str == null)
@@ -60,6 +61,7 @@ namespace Grynwald.Utilities
         /// <param name="str">The string which's last character to check.</param>
         /// <param name="c">The character to compare to the string's last character.</param>
         /// <returns>Returns true if the string has at least one character and the last character matches <paramref name="c"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static bool EndsWith(this string str, char c)
         {
             if (str == null)

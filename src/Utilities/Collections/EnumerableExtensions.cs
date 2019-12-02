@@ -62,6 +62,8 @@ namespace Grynwald.Utilities.Collections
         /// </remarks>
         /// <typeparam name="T">The type of elements in the enumerable.</typeparam>
         /// <param name="enumerable">The collection of items to copy to the set.</param>
+        [HiddenFromReferenceAssembly("net472")]
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable) => new HashSet<T>(enumerable);
 
         /// <summary>
@@ -76,6 +78,8 @@ namespace Grynwald.Utilities.Collections
         /// <typeparam name="T">The type of elements in the enumerable.</typeparam>
         /// <param name="enumerable">The collection of items to copy to the set.</param>
         /// <param name="comparer">The comparer to use for creating the set.</param>
+        [HiddenFromReferenceAssembly("net472")]
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer) =>
             new HashSet<T>(enumerable, comparer);
 

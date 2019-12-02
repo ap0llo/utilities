@@ -30,6 +30,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -52,6 +53,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params string[] values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -74,6 +76,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params object[] values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -96,6 +99,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params object[] values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));
@@ -118,6 +122,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params string[] values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));
@@ -140,6 +145,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, char separator, IEnumerable<T> values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));

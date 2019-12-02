@@ -53,6 +53,7 @@ namespace Grynwald.Utilities.Collections
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary to retrieve the value from.</param>
         /// <param name="key">The key to locate in the dictionary.</param>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key) => dictionary.GetValueOrDefault(key, default);
 
         /// <summary>
@@ -69,6 +70,7 @@ namespace Grynwald.Utilities.Collections
         /// <param name="dictionary">The dictionary to retrieve the value from.</param>
         /// <param name="key">The key to locate in the dictionary.</param>
         /// <param name="defaultValue">The value to return if the dictionary does not contain an item with the specified key.</param>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue)
         {
             return dictionary.ContainsKey(key)
