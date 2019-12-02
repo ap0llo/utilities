@@ -17,7 +17,7 @@
 
 ## API Reference
 
-For documentation of the types in this libary, have a look at the [API docs](docs/api/Grynwald/Utilities/Namespace.md).
+For documentation of the types in this libary, have a look at the [API docs](docs/api/Grynwald/Utilities/index.md).
 
 ## Building from source
 
