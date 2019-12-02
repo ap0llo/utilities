@@ -46,22 +46,29 @@ namespace Grynwald.Utilities.Collections
             return enumerable.Concat(newItem.Yield());
         }
 
-        // ToHashSet exists in .NET Core 2.0 and .NET Framework 4.7.2
+        // ToHashSet exists in .NET Core 2.0, .NET Standard 2.1 and .NET Framework 4.7.2
         // Exclude the method from the reference assembly for these target frameworks
         // so a project targeting netcoreapp2.0, uses the built-in method
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NET472))
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NET472 || NETSTANDARD2_1))
 
         /// <summary>
         /// Creates a new <see cref="HashSet{T}"/> with elements copied from the enumerable
         /// using the default equality comparer.
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assemblies for .NET Core 2.0 or later
-        /// and .NET Framework 4.7.2 or later because a equivalent extension method, are available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferable:
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Framework 4.7.2 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <typeparam name="T">The type of elements in the enumerable.</typeparam>
         /// <param name="enumerable">The collection of items to copy to the set.</param>
+        [HiddenFromReferenceAssembly("net472")]
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable) => new HashSet<T>(enumerable);
 
         /// <summary>
@@ -69,13 +76,20 @@ namespace Grynwald.Utilities.Collections
         /// using the specified equality comparer.
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assemblies for .NET Core 2.0 or later
-        /// and .NET Framework 4.7.2 or later because a equivalent extension method, are available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferable:
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Framework 4.7.2 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <typeparam name="T">The type of elements in the enumerable.</typeparam>
         /// <param name="enumerable">The collection of items to copy to the set.</param>
         /// <param name="comparer">The comparer to use for creating the set.</param>
+        [HiddenFromReferenceAssembly("net472")]
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer) =>
             new HashSet<T>(enumerable, comparer);
 

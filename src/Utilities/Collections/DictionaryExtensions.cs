@@ -38,21 +38,26 @@ namespace Grynwald.Utilities.Collections
         // GetValueOrDefault was added in .NET Core 2.0.
         // Exclude the method from the reference assembly for .NET Core 2.0,
         // so a project targeting netcoreapp2.0, uses the built-in method
-#if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
 
         /// <summary>
         /// Tries to get the element with the specified key.
         /// If the dictionary does not contain a matching element, default(TValue) is returned
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assembly for .NET Core 2.0 or later
-        /// because a equivalent extension method, is available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferable.
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary to retrieve the value from.</param>
         /// <param name="key">The key to locate in the dictionary.</param>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key) => dictionary.GetValueOrDefault(key, default);
 
         /// <summary>
@@ -60,15 +65,20 @@ namespace Grynwald.Utilities.Collections
         /// If the dictionary does not contain a matching element, <c>default(TValue)</c> is returned
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assembly for .NET Core 2.0 or later
-        /// because a equivalent extension method, is available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferrable.
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary to retrieve the value from.</param>
         /// <param name="key">The key to locate in the dictionary.</param>
         /// <param name="defaultValue">The value to return if the dictionary does not contain an item with the specified key.</param>
+        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue)
         {
             return dictionary.ContainsKey(key)
