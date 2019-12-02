@@ -27,21 +27,25 @@ namespace Grynwald.Utilities
             return stream;
         }
 
-        // Hide Methods from projects targeting .NET Core 2.0 or later because for that target,
-        // String.StartsWith(char) and String.EndsWith(char) are built-in
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1))
+        // Hide Methods from projects targeting .NET Core 2.0 or later / .NET Standard 2.1 or later
+        // because for that target, String.StartsWith(char) and String.EndsWith(char) are built-in
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
         /// <summary>
         /// Determines if the string starts with the specified character.
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assembly for .NET Core 2.0 or later
-        /// because a corresponding overload of the String class, is available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferable:
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <param name="str">The string which's first character to check.</param>
         /// <param name="c">The character to compare to the string's first character.</param>
         /// <returns>Returns true if the string has at least one character and the first character matches <paramref name="c"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static bool StartsWith(this string str, char c)
         {
             if (str == null)
@@ -54,14 +58,18 @@ namespace Grynwald.Utilities
         /// Determines if the string ends with the specified character.
         /// </summary>
         /// <remarks>
-        /// This method is not included in the reference assembly for .NET Core 2.0 or later
-        /// because a corresponding overload of the String class, is available there
-        /// and using the built-in method is preferable.
+        /// This method is not included in the reference assembly for the following frameworks
+        /// because a equivalent extension method, is available there and using the built-in method is preferable:
+        /// <list type="bullet">
+        ///     <item><description>.NET Core 2.0 or later</description></item>
+        ///     <item><description>.NET Standard 2.1 or later</description></item>
+        /// </list>       
         /// </remarks>
         /// <param name="str">The string which's last character to check.</param>
         /// <param name="c">The character to compare to the string's last character.</param>
         /// <returns>Returns true if the string has at least one character and the last character matches <paramref name="c"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static bool EndsWith(this string str, char c)
         {
             if (str == null)

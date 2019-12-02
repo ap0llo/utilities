@@ -10,18 +10,19 @@ namespace Grynwald.Utilities.Text
     public static class StringBuilderExtensions
     {
 
-        // Hide AppendJoin() methods from projects targeting .NET Core 2.0 or later as AppendJoin is available as built-in functionality.
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1))
+        // Hide AppendJoin() methods from projects targeting .NET Core 2.0 or later / .NET Standard 2.1 or later
+        // because AppendJoin() is available as built-in functionality.
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
 
         /// <summary>
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -31,6 +32,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -41,11 +43,11 @@ namespace Grynwald.Utilities.Text
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -54,6 +56,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params string[] values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -64,11 +67,11 @@ namespace Grynwald.Utilities.Text
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -77,6 +80,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params object[] values)
         {
             stringBuilder.Append(String.Join(separator, values));
@@ -87,11 +91,11 @@ namespace Grynwald.Utilities.Text
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -100,6 +104,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params object[] values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));
@@ -110,11 +115,11 @@ namespace Grynwald.Utilities.Text
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -123,6 +128,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params string[] values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));
@@ -133,11 +139,11 @@ namespace Grynwald.Utilities.Text
         /// Appends the members of a collection, separated by the specified separator.
         /// </summary>
         /// <remarks>
-        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0. This
-        /// extension method makes it available on earlier versions and to projects
-        /// targeting .NET Standard or .NET Framework.
+        /// AppendJoin() was added to <see cref="StringBuilder"/> in .NET Core 2.0 / .NET Standard 2.1.
+        /// This extension method makes it available on earlier versions and to projects
+        /// targeting .NET Standard 2.0 or .NET Framework.
         /// <para>
-        /// This method is excluded from the reference assembly for .NET Core 2.0 so
+        /// This method is excluded from the reference assembly for .NET Core 2.0 and .NET Standard 2.1 so
         /// projects targeting this will use the built-in method.
         /// </para>
         /// </remarks>
@@ -146,6 +152,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
         [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, char separator, IEnumerable<T> values)
         {
             stringBuilder.Append(String.Join(separator.ToString(), values));
