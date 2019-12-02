@@ -11,7 +11,7 @@ namespace Grynwald.Utilities.Text
     {
 
         // Hide AppendJoin() methods from projects targeting .NET Core 2.0 or later as AppendJoin is available as built-in functionality.
-#if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1))
 
         /// <summary>
         /// Appends the members of a collection, separated by the specified separator.

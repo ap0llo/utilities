@@ -29,7 +29,7 @@ namespace Grynwald.Utilities
 
         // Hide Methods from projects targeting .NET Core 2.0 or later because for that target,
         // String.StartsWith(char) and String.EndsWith(char) are built-in
-#if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1))
         /// <summary>
         /// Determines if the string starts with the specified character.
         /// </summary>

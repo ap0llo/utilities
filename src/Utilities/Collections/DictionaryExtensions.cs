@@ -38,7 +38,7 @@ namespace Grynwald.Utilities.Collections
         // GetValueOrDefault was added in .NET Core 2.0.
         // Exclude the method from the reference assembly for .NET Core 2.0,
         // so a project targeting netcoreapp2.0, uses the built-in method
-#if !(REFERENCE_ASSEMBLY && NETCOREAPP2_0)
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1))
 
         /// <summary>
         /// Tries to get the element with the specified key.

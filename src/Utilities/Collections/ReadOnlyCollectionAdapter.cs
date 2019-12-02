@@ -31,6 +31,7 @@ namespace Grynwald.Utilities.Collections
     /// <summary>
     /// Wraps an instance of <see cref="ICollection{T}"/> as an <see cref="IReadOnlyCollection{T}"/>
     /// </summary>
+    /// <typeparam name="T">The collection's element type.</typeparam>
     public class ReadOnlyCollectionAdapter<T> : IReadOnlyCollection<T>
     {
         private readonly ICollection<T> m_Collection;
@@ -40,8 +41,7 @@ namespace Grynwald.Utilities.Collections
 
         /// <summary>
         /// Initializes a new instance of <see cref="ReadOnlyCollectionAdapter{T}"/>.
-        /// </summary>
-        /// <typeparam name="T">The collection's element type.</typeparam>
+        /// </summary>        
         /// <param name="collection">The collection to wrap in a read-only adapter.</param>
         public ReadOnlyCollectionAdapter(ICollection<T> collection)
         {
