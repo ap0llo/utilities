@@ -11,11 +11,7 @@
     <PackageReference Include="NuGet.Frameworks" Version="5.3.1" />
     <PackageReference Include="NuGet.Packaging" Version="5.3.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +23,7 @@
     <MSBuild Projects="@(ProjectReference)" 
              Properties="PackageOutputPath=$(OutputPath)/packagesToVerify/"
              Condition="%(ProjectReference.VerifyPackage) == true"
-             Targets="Build;Pack"
-    />
-
+             Targets="Build;Pack" />
   </Target>
   
 

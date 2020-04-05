@@ -2,8 +2,8 @@
 
 	<PropertyGroup>
 		<LangVersion>7.1</LangVersion>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
-
 	
 	<!-- Output paths -->
 	<PropertyGroup>
@@ -21,17 +21,9 @@
 	<!--NuGet package properties -->
 	<PropertyGroup>
 		<Authors>Andreas Gruenwald</Authors>
-		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
-		<PackageLicenseUrl>https://github.com/ap0llo/utilities/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>A collection of utility functions for usage in C#/.NET projects</Description>
 	</PropertyGroup>
 
-	<!-- 
-		Workaround for malformed xml documentation file shipping for netstandard2.0.
-		See https://github.com/saucecontrol/InheritDoc#known-issues
-	-->
-	<ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-		<PackageDownload Include="NETStandard.Library.Ref" Version="[2.1.0]" />
-		<InheritDocReference Include="$([MSBuild]::EnsureTrailingSlash('$(NugetPackageRoot)'))netstandard.library.ref\2.1.0\ref\netstandard2.1\netstandard.xml" />
-	</ItemGroup>
 </Project>
