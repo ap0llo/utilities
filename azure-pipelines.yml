@@ -30,7 +30,7 @@ variables:
   # Build settings
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE : true    # do not populate NuGet caches on build agents (VM will be deleted afterwards anyways)
   configuration: Release                      # the configuration (Debug/Release) to build
-  dotNetSdk_Version: 3.0.100                  # the version of the .NET SDK to use
+  dotNetSdk_Version: 3.1.200                  # the version of the .NET SDK to use
   solutionPath : src/Utilities.sln            # The path of the solution to be buildt
   artifactsName: drop
   # MyGet.org settings   
@@ -171,10 +171,11 @@ jobs:
   condition: succeeded('Publish_to_NuGet_org')
   steps:
 
-  # Install .NET Core SDK (version specified in the variables section)
-  - task: DotNetCoreInstaller@0
-    displayName: Install .NET Core SDK
+  # Install .NET Core SDK and runtime (version specified in the variables section)
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK $(dotNetSdk_Version)'
     inputs:
+      packageType: sdk
       version: $(dotNetSdk_Version)
 
   # Restore local .NET Core tools
@@ -188,7 +189,6 @@ jobs:
   # Set the build number using Nerdbank.GitVersioning
   - script: dotnet tool run nbgv cloud
     displayName: Set Version
-
 
   # Get build artifacts and create a GitHub release
   - task: DownloadBuildArtifacts@0
