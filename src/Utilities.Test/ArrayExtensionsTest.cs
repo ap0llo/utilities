@@ -22,7 +22,7 @@ namespace Grynwald.Utilities.Test
         [InlineData(10, 3, 4)]
         public void Segment_returns_expected_segments(int arraySize, int maxSegmentSize, int expectedSegmentCount)
         {
-            var array = Enumerable.Range(1, arraySize).ToArray();                
+            var array = Enumerable.Range(1, arraySize).ToArray();
 
             var segments = array.GetSegments(maxSegmentSize).ToArray();
 

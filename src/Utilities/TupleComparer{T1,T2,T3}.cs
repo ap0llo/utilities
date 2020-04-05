@@ -49,7 +49,7 @@ namespace Grynwald.Utilities
         }
 
         public bool Equals((T1, T2, T3) x, (T1, T2, T3) y) =>
-            m_FirstItemComparer.Equals(x.Item1, y.Item1)  &&
+            m_FirstItemComparer.Equals(x.Item1, y.Item1) &&
             m_SecondItemComparer.Equals(x.Item2, y.Item2) &&
             m_ThirdItemComparer.Equals(x.Item3, y.Item3);
 
@@ -63,6 +63,6 @@ namespace Grynwald.Utilities
                 return hash;
             }
         }
-        
+
     }
 }

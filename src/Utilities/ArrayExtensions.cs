@@ -45,7 +45,7 @@ namespace Grynwald.Utilities
 
             if (array.Length == 0)
                 return Enumerable.Empty<ArraySegment<T>>();
-            
+
             return DoGetSegments();
         }
     }

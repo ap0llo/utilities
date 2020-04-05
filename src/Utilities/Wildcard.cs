@@ -58,6 +58,6 @@ namespace Grynwald.Utilities
         /// </code>
         /// </example>
         public bool IsMatch(string value) => m_Regex.IsMatch(value);
-        
+
     }
 }

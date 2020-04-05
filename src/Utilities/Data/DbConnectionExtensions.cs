@@ -14,7 +14,7 @@ namespace Grynwald.Utilities.Data
         /// </summary>
         public static int ExecuteNonQuery(this IDbConnection connection, string sql, params (string name, object value)[] parameters)
         {
-            var command = connection.CreateCommand(sql, parameters);            
+            var command = connection.CreateCommand(sql, parameters);
             return command.ExecuteNonQuery();
         }
 
@@ -40,7 +40,7 @@ namespace Grynwald.Utilities.Data
             catch (DbException)
             {
                 return false;
-            } 
+            }
         }
 
 

@@ -21,7 +21,7 @@ namespace Grynwald.Utilities.Collections
         public TValue this[TKey key]
         {
             get
-            {                
+            {
                 if (key == null)
                 {
                     return m_ContainsNull ? m_NullValue : throw new KeyNotFoundException();
@@ -75,7 +75,7 @@ namespace Grynwald.Utilities.Collections
         /// <inheritdoc />
         public bool IsReadOnly => m_InnerDictionary.IsReadOnly;
 
-        
+
         /// <summary>
         /// Initializes a new instance of <see cref="NullKeyDictionary{TKey, TValue}"/>.
         /// </summary>
@@ -94,12 +94,12 @@ namespace Grynwald.Utilities.Collections
         {
             IEnumerable<KeyValuePair<TKey, TValue>> enumerable = m_InnerDictionary;
 
-            if(m_ContainsNull)
+            if (m_ContainsNull)
             {
                 enumerable = enumerable.Union(new KeyValuePair<TKey, TValue>(default(TKey), m_NullValue).Yield());
             }
 
-            return enumerable.GetEnumerator();            
+            return enumerable.GetEnumerator();
         }
 
         /// <inheritdoc />
@@ -184,6 +184,6 @@ namespace Grynwald.Utilities.Collections
             {
                 return m_InnerDictionary.TryGetValue(key, out value);
             }
-        }        
+        }
     }
 }
