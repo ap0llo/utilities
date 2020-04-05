@@ -87,7 +87,7 @@ jobs:
     inputs:
       command: build
       projects: $(solutionPath)
-      arguments: '--configuration $(configuration) --no-restore /warnaserror'  
+      arguments: '--configuration $(configuration) --no-restore /warnaserror /m:1'  
   - task: DotNetCoreCLI@2
     displayName: Test
     inputs:
