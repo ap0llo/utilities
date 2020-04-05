@@ -17,7 +17,7 @@ namespace Grynwald.Utilities.Collections
         readonly IDictionary<TKey, TValue> m_InnerDictionary;
         readonly IEqualityComparer<TValue> m_ValueComparer = EqualityComparer<TValue>.Default;
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public TValue this[TKey key]
         {
             get
@@ -45,7 +45,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public ICollection<TKey> Keys
         {
             get
@@ -57,7 +57,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public ICollection<TValue> Values
         {
             get
@@ -69,10 +69,10 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public int Count => m_InnerDictionary.Count + (m_ContainsNull ? 1 : 0);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public bool IsReadOnly => m_InnerDictionary.IsReadOnly;
 
         
@@ -89,7 +89,7 @@ namespace Grynwald.Utilities.Collections
             m_InnerDictionary = new Dictionary<TKey, TValue>(keyComparer);
 
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
         {
             IEnumerable<KeyValuePair<TKey, TValue>> enumerable = m_InnerDictionary;
@@ -102,13 +102,13 @@ namespace Grynwald.Utilities.Collections
             return enumerable.GetEnumerator();            
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public void Add(KeyValuePair<TKey, TValue> item) => Add(item.Key, item.Value);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public void Clear()
         {
             m_NullValue = default(TValue);
@@ -116,23 +116,23 @@ namespace Grynwald.Utilities.Collections
             m_InnerDictionary.Clear();
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public bool Contains(KeyValuePair<TKey, TValue> item) =>
             ContainsKey(item.Key) && m_ValueComparer.Equals(item.Value, this[item.Key]);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) =>
             throw new NotSupportedException();
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public bool Remove(KeyValuePair<TKey, TValue> item) =>
             throw new NotSupportedException();
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public bool ContainsKey(TKey key) =>
             key == null ? m_ContainsNull : m_InnerDictionary.ContainsKey(key);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public void Add(TKey key, TValue value)
         {
             if (key == null)
@@ -151,7 +151,7 @@ namespace Grynwald.Utilities.Collections
             }
         }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public bool Remove(TKey key)
         {
             if (key == null)

@@ -36,7 +36,7 @@ namespace Grynwald.Utilities.Collections
     {
         private readonly ICollection<T> m_Collection;
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public int Count => m_Collection.Count;
 
         /// <summary>
@@ -49,9 +49,10 @@ namespace Grynwald.Utilities.Collections
         }
 
 
-        /// <inheritDoc />
+        /// <inheritdoc />
         public IEnumerator<T> GetEnumerator() => m_Collection.GetEnumerator();
-        /// <inheritDoc />
+
+        /// <inheritdoc />
         IEnumerator IEnumerable.GetEnumerator() => m_Collection.GetEnumerator();
     }
 }

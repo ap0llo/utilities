@@ -21,7 +21,7 @@ namespace Grynwald.Utilities.Collections
         /// </summary>
 		public IReversibleDictionary<TValue, TKey> ReversedDictionary { get; }
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public TValue this[TKey key]
 		{
 			get
@@ -42,16 +42,16 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public int Count => m_KeyDictionary.Count;
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public bool IsReadOnly => false;
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public ICollection<TKey> Keys => m_KeyDictionary.Keys;
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public ICollection<TValue> Values => m_KeyDictionary.Values;
 
 
@@ -64,10 +64,10 @@ namespace Grynwald.Utilities.Collections
 		}
 
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public void Add(KeyValuePair<TKey, TValue> item) => Add(item.Key, item.Value);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public void Add(TKey key, TValue value)
 		{
 			lock (this)
@@ -82,7 +82,7 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public void Clear()
 		{
 			lock (this)
@@ -92,22 +92,22 @@ namespace Grynwald.Utilities.Collections
 			}
 		}
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public bool Contains(KeyValuePair<TKey, TValue> item) => ContainsKey(item.Key);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public bool ContainsKey(TKey key) => m_KeyDictionary.ContainsKey(key);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex) => m_KeyDictionary.CopyTo(array, arrayIndex);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator() => m_KeyDictionary.GetEnumerator();
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public bool Remove(KeyValuePair<TKey, TValue> item) => Remove(item.Key);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		public bool Remove(TKey key)
 		{
 			lock (this)
@@ -128,7 +128,7 @@ namespace Grynwald.Utilities.Collections
        
 		public bool TryGetValue(TKey key, out TValue value) => m_KeyDictionary.TryGetValue(key, out value);
 
-        /// <inheritDoc />
+        /// <inheritdoc />
 		IEnumerator IEnumerable.GetEnumerator() => m_KeyDictionary.GetEnumerator();
 
 
