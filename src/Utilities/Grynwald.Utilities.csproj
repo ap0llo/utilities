@@ -23,8 +23,20 @@
 
   <!-- InheritDoc -->
   <ItemGroup>
-    <PackageReference Include="SauceControl.InheritDoc" Version="0.3.0" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-  </ItemGroup>
+    <PackageReference Include="SauceControl.InheritDoc" Version="1.0.0" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+  </ItemGroup>  
+	<!-- 
+		Workaround for malformed xml documentation file shipping for netstandard2.0.
+		See https://github.com/saucecontrol/InheritDoc#known-issues
+	-->
+	<ItemGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+		<PackageDownload Include="NETStandard.Library.Ref" Version="[2.1.0]" />
+		<InheritDocReference Include="$([MSBuild]::EnsureTrailingSlash('$(NugetPackageRoot)'))netstandard.library.ref\2.1.0\ref\netstandard2.1\netstandard.xml" />
+	</ItemGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' "> 
+    <MSBuildWarningsAsMessages>IDT001</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+
 
   <!-- MdDocs (generates API Reference docs)-->
   <PropertyGroup>
@@ -35,5 +47,6 @@
   <ItemGroup>
     <PackageReference Include="Grynwald.MdDocs.MSBuild" Version="0.2.46" PrivateAssets="all" />
   </ItemGroup>
+
 
 </Project>
