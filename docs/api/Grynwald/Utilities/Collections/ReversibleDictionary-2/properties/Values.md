@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Gets an ICollection\<T\> containing the values in the IDictionary\<T1, T2\>.
+
 ```csharp
 public ICollection<TValue> Values { get; }
 ```

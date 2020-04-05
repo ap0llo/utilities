@@ -2,6 +2,8 @@
 
 **Declaring Type:** [TupleComparer\<T1, T2\>](../index.md)
 
+Determines whether the specified objects are equal.
+
 ```csharp
 public bool Equals(ValueTuple<T1, T2> x, ValueTuple<T1, T2> y);
 ```
@@ -10,11 +12,17 @@ public bool Equals(ValueTuple<T1, T2> x, ValueTuple<T1, T2> y);
 
 `x`  ValueTuple\<T1, T2\>
 
+The first object of type `T` to compare.
+
 `y`  ValueTuple\<T1, T2\>
+
+The second object of type `T` to compare.
 
 ## Returns
 
 bool
+
+ if the specified objects are equal; otherwise, .
 
 ___
 

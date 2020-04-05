@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Gets a value indicating whether the ICollection\<T\> is read\-only.
+
 ```csharp
 public bool IsReadOnly { get; }
 ```

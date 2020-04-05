@@ -2,6 +2,8 @@
 
 **Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
+Gets an ICollection\<T\> containing the keys of the IDictionary\<T1, T2\>.
+
 ```csharp
 public ICollection<TKey> Keys { get; }
 ```

@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Determines whether the ICollection\<T\> contains a specific value.
+
 ```csharp
 public bool Contains(KeyValuePair<TKey, TValue> item);
 ```
@@ -10,9 +12,13 @@ public bool Contains(KeyValuePair<TKey, TValue> item);
 
 `item`  KeyValuePair\<TKey, TValue\>
 
+The object to locate in the ICollection\<T\>.
+
 ## Returns
 
 bool
+
+ if `item` is found in the ICollection\<T\>; otherwise, .
 
 ___
 

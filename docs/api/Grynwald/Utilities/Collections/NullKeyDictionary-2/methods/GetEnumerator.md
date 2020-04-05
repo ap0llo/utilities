@@ -2,6 +2,8 @@
 
 **Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
+Returns an enumerator that iterates through the collection.
+
 ```csharp
 public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();
 ```
@@ -9,6 +11,8 @@ public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator();
 ## Returns
 
 IEnumerator\<KeyValuePair\<TKey, TValue\>\>
+
+An enumerator that can be used to iterate through the collection.
 
 ___
 

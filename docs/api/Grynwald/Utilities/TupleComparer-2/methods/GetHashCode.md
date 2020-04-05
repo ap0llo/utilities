@@ -2,6 +2,8 @@
 
 **Declaring Type:** [TupleComparer\<T1, T2\>](../index.md)
 
+Returns a hash code for the specified object.
+
 ```csharp
 public int GetHashCode(ValueTuple<T1, T2> obj);
 ```
@@ -10,9 +12,19 @@ public int GetHashCode(ValueTuple<T1, T2> obj);
 
 `obj`  ValueTuple\<T1, T2\>
 
+The object for which a hash code is to be returned.
+
 ## Returns
 
 int
+
+A hash code for the specified object.
+
+## Exceptions
+
+ArgumentNullException
+
+The type of `obj` is a reference type and `obj` is .
 
 ___
 

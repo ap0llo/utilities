@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Gets or sets the element with the specified key.
+
 ```csharp
 public TValue this[TKey key] { get; set; }
 ```
@@ -10,9 +12,25 @@ public TValue this[TKey key] { get; set; }
 
 `key`  TKey
 
+The key of the element to get or set.
+
 ## Indexer Value
 
 TValue
+
+## Exceptions
+
+ArgumentNullException
+
+`key` is .
+
+KeyNotFoundException
+
+The property is retrieved and `key` is not found.
+
+NotSupportedException
+
+The property is set and the IDictionary\<T1, T2\> is read\-only.
 
 ___
 

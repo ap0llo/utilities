@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Determines whether the IDictionary\<T1, T2\> contains an element with the specified key.
+
 ```csharp
 public bool ContainsKey(TKey key);
 ```
@@ -10,9 +12,19 @@ public bool ContainsKey(TKey key);
 
 `key`  TKey
 
+The key to locate in the IDictionary\<T1, T2\>.
+
 ## Returns
 
 bool
+
+ if the IDictionary\<T1, T2\> contains an element with the key; otherwise, .
+
+## Exceptions
+
+ArgumentNullException
+
+`key` is .
 
 ___
 

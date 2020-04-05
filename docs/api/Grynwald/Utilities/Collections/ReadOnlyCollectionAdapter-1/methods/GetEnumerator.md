@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../index.md)
 
+Returns an enumerator that iterates through the collection.
+
 ```csharp
 public IEnumerator<T> GetEnumerator();
 ```
@@ -9,6 +11,8 @@ public IEnumerator<T> GetEnumerator();
 ## Returns
 
 IEnumerator\<T\>
+
+An enumerator that can be used to iterate through the collection.
 
 ___
 

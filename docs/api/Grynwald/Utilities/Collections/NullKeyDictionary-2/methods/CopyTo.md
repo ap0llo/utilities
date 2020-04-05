@@ -2,6 +2,8 @@
 
 **Declaring Type:** [NullKeyDictionary\<TKey, TValue\>](../index.md)
 
+Copies the elements of the ICollection\<T\> to an Array, starting at a particular Array index.
+
 ```csharp
 public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex);
 ```
@@ -10,7 +12,25 @@ public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex);
 
 `array`  KeyValuePair\<TKey, TValue\>\[\]
 
+The one\-dimensional Array that is the destination of the elements copied from ICollection\<T\>. The Array must have zero\-based indexing.
+
 `arrayIndex`  int
+
+The zero\-based index in `array` at which copying begins.
+
+## Exceptions
+
+ArgumentNullException
+
+`array` is .
+
+ArgumentOutOfRangeException
+
+`arrayIndex` is less than 0.
+
+ArgumentException
+
+The number of elements in the source ICollection\<T\> is greater than the available space from `arrayIndex` to the end of the destination `array`.
 
 ___
 

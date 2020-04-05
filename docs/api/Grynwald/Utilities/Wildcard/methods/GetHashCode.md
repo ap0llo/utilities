@@ -2,6 +2,8 @@
 
 **Declaring Type:** [Wildcard](../index.md)
 
+Serves as the default hash function.
+
 ```csharp
 public int GetHashCode();
 ```
@@ -9,6 +11,8 @@ public int GetHashCode();
 ## Returns
 
 int
+
+A hash code for the current object.
 
 ___
 

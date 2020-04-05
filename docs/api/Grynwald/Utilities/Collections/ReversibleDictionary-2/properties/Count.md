@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReversibleDictionary\<TKey, TValue\>](../index.md)
 
+Gets the number of elements contained in the ICollection\<T\>.
+
 ```csharp
 public int Count { get; }
 ```

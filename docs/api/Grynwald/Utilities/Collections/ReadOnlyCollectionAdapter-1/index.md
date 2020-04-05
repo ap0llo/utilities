@@ -28,15 +28,15 @@ The collection's element type.
 
 ## Properties
 
-| Name                         | Description |
-| ---------------------------- | ----------- |
-| [Count](properties/Count.md) |             |
+| Name                         | Description                                    |
+| ---------------------------- | ---------------------------------------------- |
+| [Count](properties/Count.md) | Gets the number of elements in the collection. |
 
 ## Methods
 
-| Name                                        | Description |
-| ------------------------------------------- | ----------- |
-| [GetEnumerator()](methods/GetEnumerator.md) |             |
+| Name                                        | Description                                                 |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| [GetEnumerator()](methods/GetEnumerator.md) | Returns an enumerator that iterates through the collection. |
 
 ___
 

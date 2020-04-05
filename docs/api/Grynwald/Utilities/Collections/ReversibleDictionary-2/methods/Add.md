@@ -4,12 +4,14 @@
 
 ## Overloads
 
-| Signature                                                        | Description |
-| ---------------------------------------------------------------- | ----------- |
-| [Add(KeyValuePair\<TKey, TValue\>)](#addkeyvaluepairtkey-tvalue) |             |
-| [Add(TKey, TValue)](#addtkey-tvalue)                             |             |
+| Signature                                                        | Description                                                                   |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Add(KeyValuePair\<TKey, TValue\>)](#addkeyvaluepairtkey-tvalue) | Adds an item to the ICollection\<T\>.                                         |
+| [Add(TKey, TValue)](#addtkey-tvalue)                             | Adds an element with the provided key and value to the IDictionary\<T1, T2\>. |
 
 ## Add(KeyValuePair\<TKey, TValue\>)
+
+Adds an item to the ICollection\<T\>.
 
 ```csharp
 public void Add(KeyValuePair<TKey, TValue> item);
@@ -19,7 +21,17 @@ public void Add(KeyValuePair<TKey, TValue> item);
 
 `item`  KeyValuePair\<TKey, TValue\>
 
+The object to add to the ICollection\<T\>.
+
+### Exceptions
+
+NotSupportedException
+
+The ICollection\<T\> is read\-only.
+
 ## Add(TKey, TValue)
+
+Adds an element with the provided key and value to the IDictionary\<T1, T2\>.
 
 ```csharp
 public void Add(TKey key, TValue value);
@@ -29,7 +41,25 @@ public void Add(TKey key, TValue value);
 
 `key`  TKey
 
+The object to use as the key of the element to add.
+
 `value`  TValue
+
+The object to use as the value of the element to add.
+
+### Exceptions
+
+ArgumentNullException
+
+`key` is .
+
+ArgumentException
+
+An element with the same key already exists in the IDictionary\<T1, T2\>.
+
+NotSupportedException
+
+The IDictionary\<T1, T2\> is read\-only.
 
 ___
 

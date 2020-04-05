@@ -32,10 +32,10 @@ The type of the tuple's second element.
 
 ## Methods
 
-| Name                                                                    | Description |
-| ----------------------------------------------------------------------- | ----------- |
-| [Equals(ValueTuple\<T1, T2\>, ValueTuple\<T1, T2\>)](methods/Equals.md) |             |
-| [GetHashCode(ValueTuple\<T1, T2\>)](methods/GetHashCode.md)             |             |
+| Name                                                                    | Description                                         |
+| ----------------------------------------------------------------------- | --------------------------------------------------- |
+| [Equals(ValueTuple\<T1, T2\>, ValueTuple\<T1, T2\>)](methods/Equals.md) | Determines whether the specified objects are equal. |
+| [GetHashCode(ValueTuple\<T1, T2\>)](methods/GetHashCode.md)             | Returns a hash code for the specified object.       |
 
 ## Example
 

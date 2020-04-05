@@ -2,6 +2,8 @@
 
 **Declaring Type:** [ReadOnlyCollectionAdapter\<T\>](../index.md)
 
+Gets the number of elements in the collection.
+
 ```csharp
 public int Count { get; }
 ```

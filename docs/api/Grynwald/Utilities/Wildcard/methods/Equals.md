@@ -4,12 +4,14 @@
 
 ## Overloads
 
-| Signature                           | Description |
-| ----------------------------------- | ----------- |
-| [Equals(object)](#equalsobject)     |             |
-| [Equals(Wildcard)](#equalswildcard) |             |
+| Signature                           | Description                                                                       |
+| ----------------------------------- | --------------------------------------------------------------------------------- |
+| [Equals(object)](#equalsobject)     | Determines whether the specified object is equal to the current object.           |
+| [Equals(Wildcard)](#equalswildcard) | Indicates whether the current object is equal to another object of the same type. |
 
 ## Equals(object)
+
+Determines whether the specified object is equal to the current object.
 
 ```csharp
 public bool Equals(object obj);
@@ -19,11 +21,17 @@ public bool Equals(object obj);
 
 `obj`  object
 
+The object to compare with the current object.
+
 ### Returns
 
 bool
 
+ if the specified object  is equal to the current object; otherwise, .
+
 ## Equals(Wildcard)
+
+Indicates whether the current object is equal to another object of the same type.
 
 ```csharp
 public bool Equals(Wildcard other);
@@ -33,9 +41,13 @@ public bool Equals(Wildcard other);
 
 `other`  [Wildcard](../index.md)
 
+An object to compare with this object.
+
 ### Returns
 
 bool
+
+ if the current object is equal to the `other` parameter; otherwise, .
 
 ___
 

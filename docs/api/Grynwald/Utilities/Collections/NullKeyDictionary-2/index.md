@@ -33,33 +33,33 @@ The type of values in the dictionary.
 
 ## Properties
 
-| Name                                   | Description |
-| -------------------------------------- | ----------- |
-| [Count](properties/Count.md)           |             |
-| [IsReadOnly](properties/IsReadOnly.md) |             |
-| [Keys](properties/Keys.md)             |             |
-| [Values](properties/Values.md)         |             |
+| Name                                   | Description                                                                  |
+| -------------------------------------- | ---------------------------------------------------------------------------- |
+| [Count](properties/Count.md)           | Gets the number of elements contained in the ICollection\<T\>.               |
+| [IsReadOnly](properties/IsReadOnly.md) | Gets a value indicating whether the ICollection\<T\> is read\-only.          |
+| [Keys](properties/Keys.md)             | Gets an ICollection\<T\> containing the keys of the IDictionary\<T1, T2\>.   |
+| [Values](properties/Values.md)         | Gets an ICollection\<T\> containing the values in the IDictionary\<T1, T2\>. |
 
 ## Indexers
 
-| Name                             | Description |
-| -------------------------------- | ----------- |
-| [Item\[TKey\]](indexers/Item.md) |             |
+| Name                             | Description                                      |
+| -------------------------------- | ------------------------------------------------ |
+| [Item\[TKey\]](indexers/Item.md) | Gets or sets the element with the specified key. |
 
 ## Methods
 
-| Name                                                                                    | Description |
-| --------------------------------------------------------------------------------------- | ----------- |
-| [Add(KeyValuePair\<TKey, TValue\>)](methods/Add.md#addkeyvaluepairtkey-tvalue)          |             |
-| [Add(TKey, TValue)](methods/Add.md#addtkey-tvalue)                                      |             |
-| [Clear()](methods/Clear.md)                                                             |             |
-| [Contains(KeyValuePair\<TKey, TValue\>)](methods/Contains.md)                           |             |
-| [ContainsKey(TKey)](methods/ContainsKey.md)                                             |             |
-| [CopyTo(KeyValuePair\<TKey, TValue\>\[\], int)](methods/CopyTo.md)                      |             |
-| [GetEnumerator()](methods/GetEnumerator.md)                                             |             |
-| [Remove(KeyValuePair\<TKey, TValue\>)](methods/Remove.md#removekeyvaluepairtkey-tvalue) |             |
-| [Remove(TKey)](methods/Remove.md#removetkey)                                            |             |
-| [TryGetValue(TKey, TValue&)](methods/TryGetValue.md)                                    |             |
+| Name                                                                                    | Description                                                                                    |
+| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [Add(KeyValuePair\<TKey, TValue\>)](methods/Add.md#addkeyvaluepairtkey-tvalue)          | Adds an item to the ICollection\<T\>.                                                          |
+| [Add(TKey, TValue)](methods/Add.md#addtkey-tvalue)                                      | Adds an element with the provided key and value to the IDictionary\<T1, T2\>.                  |
+| [Clear()](methods/Clear.md)                                                             | Removes all items from the ICollection\<T\>.                                                   |
+| [Contains(KeyValuePair\<TKey, TValue\>)](methods/Contains.md)                           | Determines whether the ICollection\<T\> contains a specific value.                             |
+| [ContainsKey(TKey)](methods/ContainsKey.md)                                             | Determines whether the IDictionary\<T1, T2\> contains an element with the specified key.       |
+| [CopyTo(KeyValuePair\<TKey, TValue\>\[\], int)](methods/CopyTo.md)                      | Copies the elements of the ICollection\<T\> to an Array, starting at a particular Array index. |
+| [GetEnumerator()](methods/GetEnumerator.md)                                             | Returns an enumerator that iterates through the collection.                                    |
+| [Remove(KeyValuePair\<TKey, TValue\>)](methods/Remove.md#removekeyvaluepairtkey-tvalue) | Removes the first occurrence of a specific object from the ICollection\<T\>.                   |
+| [Remove(TKey)](methods/Remove.md#removetkey)                                            | Removes the element with the specified key from the IDictionary\<T1, T2\>.                     |
+| [TryGetValue(TKey, TValue&)](methods/TryGetValue.md)                                    |                                                                                                |
 
 ___
 
