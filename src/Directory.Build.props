@@ -1,29 +1,47 @@
 <Project>
-
-	<PropertyGroup>
-		<LangVersion>7.1</LangVersion>
-		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-	</PropertyGroup>
 	
 	<!-- Output paths -->
 	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 		<BaseOutputPath Condition="'$(BUILD_BINARIESDIRECTORY)' != '' ">$(BUILD_BINARIESDIRECTORY)</BaseOutputPath>
-		<BaseOutputPath Condition="'$(BaseOutputPath)' == '' ">$(MSBuildThisFileDirectory)..\Build\</BaseOutputPath>
-		<BaseOutputPath Condition="!HasTrailingSlash('BaseOutputPath')">$(BaseOutputPath)\</BaseOutputPath>
-		<BaseIntermediateOutputPath>$(BaseOutputPath)intermediate\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-		<OutputPath>$(BaseOutputPath)$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+		<BaseOutputPath Condition="'$(BaseOutputPath)' == '' ">$(MSBuildThisFileDirectory)../Build/</BaseOutputPath>
+		<BaseOutputPath Condition="!HasTrailingSlash('BaseOutputPath')">$(BaseOutputPath)/</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)$(Configuration)/$(MSBuildProjectName)/</OutputPath>		
 	</PropertyGroup>
-	
+
+	<!-- Nerdbank.GitVersioning -->	
 	<ItemGroup>
 		<PackageReference Include="Nerdbank.GitVersioning" Version="3.1.74" PrivateAssets="all" />
 	</ItemGroup>
 
-	<!--NuGet package properties -->
+	<!-- Compiler settings-->
+	<PropertyGroup>
+		<LangVersion>7.1</LangVersion>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<!--NuGet Settings -->
 	<PropertyGroup>
 		<Authors>Andreas Gruenwald</Authors>
 		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>		
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>A collection of utility functions for usage in C#/.NET projects</Description>
 	</PropertyGroup>
+
+	<!-- Enable deterministic builds when building in Azure DevOps-->
+	<PropertyGroup Condition=" '$(TF_BUILD)' == 'true' ">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+	<!-- SourceLink  (https://github.com/dotnet/sourcelink) -->
+	<PropertyGroup>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>    
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+	</ItemGroup>
 
 </Project>
