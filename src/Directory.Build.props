@@ -2,6 +2,7 @@
 
 	<PropertyGroup>
 		<LangVersion>7.1</LangVersion>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
 	
 	<!-- Output paths -->
