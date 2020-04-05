@@ -48,7 +48,7 @@ namespace Grynwald.Utilities.Collections
         public bool TryGetValue(TKey key, out TValue value)
         {
             value = default;
-            return false;            
+            return false;
         }
 
         IEnumerator IEnumerable.GetEnumerator() => Enumerable.Empty<KeyValuePair<TKey, TValue>>().GetEnumerator();

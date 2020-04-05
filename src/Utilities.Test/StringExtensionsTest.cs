@@ -50,16 +50,16 @@ namespace Grynwald.Utilities.Test
         [InlineData("   \r  \rfoo", "foo")]
         [InlineData("   \r  \rfoo   \r  \r", "foo   \r")]
         [InlineData("foo   \r  \r", "foo   \r")]
-        [InlineData("   \n  \nfoo", "foo")]        
-        [InlineData("   \n  \nfoo   \n  \n", "foo   \n")]        
-        [InlineData("foo   \n  \n", "foo   \n")]        
+        [InlineData("   \n  \nfoo", "foo")]
+        [InlineData("   \n  \nfoo   \n  \n", "foo   \n")]
+        [InlineData("foo   \n  \n", "foo   \n")]
         [InlineData("  foo  \r\n", "  foo  \r\n")]
         [InlineData("\r\nfoo  ", "foo  ")]
         public void TrimEmptyLines_returns_expected_value(string input, string expectedResult)
         {
             var actualResult = input.TrimEmptyLines();
 
-            if(!expectedResult.Equals(actualResult))
+            if (!expectedResult.Equals(actualResult))
             {
                 throw new XunitException($"Unexpected result from {nameof(StringExtensions.TrimEmptyLines)}\r\n" +
                     $"Input:    \"{input.Replace("\n", "\\n").Replace("\r", "\\r")}\"\r\n" +

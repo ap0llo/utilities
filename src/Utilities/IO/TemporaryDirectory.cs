@@ -17,7 +17,7 @@ namespace Grynwald.Utilities.IO
         /// Creates a new temporary directory in the current user's temp directory (as returned by <see cref="Path.GetTempPath"/>.
         /// </summary>
         public TemporaryDirectory() : this(Path.GetTempPath())
-        {            
+        {
         }
 
         /// <summary>

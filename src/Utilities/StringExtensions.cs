@@ -74,7 +74,7 @@ namespace Grynwald.Utilities
         {
             if (str == null)
                 throw new ArgumentNullException(nameof(str));
-            
+
 
             return str.Length > 0 && str[str.Length - 1] == c;
         }
