@@ -20,8 +20,8 @@
 	<!--NuGet package properties -->
 	<PropertyGroup>
 		<Authors>Andreas Gruenwald</Authors>
-		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
-		<PackageLicenseUrl>https://github.com/ap0llo/utilities/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Description>A collection of utility functions for usage in C#/.NET projects</Description>
 	</PropertyGroup>
 
