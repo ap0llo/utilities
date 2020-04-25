@@ -1,5 +1,5 @@
 <Project>
-	
+
 	<!-- Output paths -->
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -16,7 +16,7 @@
 
 	<!-- Compiler settings-->
 	<PropertyGroup>
-		<LangVersion>7.1</LangVersion>
+		<LangVersion>8.0</LangVersion>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
 

@@ -2,26 +2,35 @@
 
 ## Overview
 
-[![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.svg)](https://www.nuget.org/packages/Grynwald.Utilities)
-[![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities)
 [![Build Status](https://dev.azure.com/ap0llo/OSS/_apis/build/status/utilities?branchName=master)](https://dev.azure.com/ap0llo/OSS/_build/latest?definitionId=8?branchName=master)
 
-*Grynwald.Utilities* is a collection of utility functions for usage in C#/.NET projects.
+| Package | NuGet.org | MyGet|
+|-|-|-|
+| `Grynwald.Utilities`               | [![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.svg)](https://www.nuget.org/packages/Grynwald.Utilities) | [![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities) |
+| `Grynwald.Utilities.Configuration` | [![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.Configuration.svg)](https://www.nuget.org/packages/Grynwald.Utilities.Configuration) | [![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.Configuration.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities.Configuration) |
+
+- *Grynwald.Utilities* is a collection of utility functions for usage in C#/.NET projects.
+- *Grynwald.Utilities.Configuration* provides some utilties for working with coniguration,
+  based on [`IConfiguration`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1)
 
 ## Installation
 
-*Grynwald.Utilities* is distributed as NuGet package.
+The libraries are distributed as NuGet package.
 
 - Prerelease builds are available on [MyGet](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities)
 - Release versions are available on [NuGet.org](https://www.nuget.org/packages/Grynwald.Utilities)
 
 ## API Reference
 
-For documentation of the types in this libary, have a look at the [API docs](docs/api/Grynwald/Utilities/index.md).
+For documentation of the types in this libary, have a look at the API docs:
+
+- [Utilities](docs/api/Utilities/Grynwald/Utilities/index.md)
+- [Utilities.Configuration](docs/api/Utilities.Configuration/Grynwald/Utilities/index.md)
 
 ## Building from source
 
-MarkdownGenerator is a .NET Standard library and can be built using the .NET SDK (tested with Visual Studio 2017 15.9)
+Utilities is a .NET Standard library and can be built using the .NET SDK
+(required the .NET SDK version 3.1.200 as specified in [global.json](./global.json))
 
 ```bat
   dotnet restore .\src\Utilities.sln
