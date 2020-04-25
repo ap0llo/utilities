@@ -1,4 +1,4 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -7,15 +7,9 @@
       By default, all warnings are treated as errors.
       However, some warnings can be ignored:
       - CS1591: Missing XML comment for publicly visible type or member 
-      - NU5128, NU5131: NuGet warnings that pack emits because of the
-        reference assemblies included in the package.
     -->
-    <NoWarn>$(NoWarn);1591;NU5128;NU5131</NoWarn>
+    <NoWarn>$(NoWarn);1591;</NoWarn>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ReferenceAssemblyProjectReference Include="..\Utilities.ReferenceAssemblies\Grynwald.Utilities.ReferenceAssemblies.csproj" />
-  </ItemGroup>
 
   <!-- InheritDoc -->
   <ItemGroup>
@@ -35,12 +29,11 @@
 
   <!-- MdDocs (generates API Reference docs)-->
   <PropertyGroup>
-    <ApiReferenceDocumentationOutputPath>$(MSBuildThisFileDirectory)..\..\docs\api\Utilities</ApiReferenceDocumentationOutputPath>
+    <ApiReferenceDocumentationOutputPath>$(MSBuildThisFileDirectory)..\..\docs\api\Utilities.Configuration</ApiReferenceDocumentationOutputPath>
     <GenerateApiReferenceDocumentationOnBuild>true</GenerateApiReferenceDocumentationOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Grynwald.MdDocs.MSBuild" Version="0.2.46" PrivateAssets="all" />
   </ItemGroup>
-
 
 </Project>
