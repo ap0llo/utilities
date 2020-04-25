@@ -22,8 +22,9 @@ namespace Grynwald.Utilities.Configuration
         /// <list type="bullet">
         ///     <item><description><see cref="string"/></description></item>
         ///     <item><description><see cref="bool"/></description></item>
-        ///     <item><description>Nullable <see cref="bool"/> values (<c>bool?</c>)</description></item>
+        ///     <item><description><see cref="int"/></description></item>
         ///     <item><description>Enum types</description></item>
+        ///     <item><description>Nullable values of <see cref="bool"/>, <see cref="int"/> and enum types</description></item>
         /// </list>
         /// </para>
         /// <para>
@@ -75,6 +76,9 @@ namespace Grynwald.Utilities.Configuration
             if (propertyType == typeof(bool))
                 return true;
 
+            if (propertyType == typeof(int))
+                return true;
+
             if (propertyType.IsEnum)
                 return true;
 
@@ -83,7 +87,7 @@ namespace Grynwald.Utilities.Configuration
             {
                 return IsSupportedPropertyType(propertyType.GetGenericArguments().Single());
             }
-            
+
             return false;
         }
     }

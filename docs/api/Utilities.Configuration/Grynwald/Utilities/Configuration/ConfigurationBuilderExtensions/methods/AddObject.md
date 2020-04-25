@@ -22,8 +22,9 @@ Supported property types for settings are
 
 - string
 - bool
-- Nullable bool values (`bool?`)
+- int
 - Enum types
+- Nullable values of bool, int and enum types
 
 When `settingsObject` is `null`, no settings are added.
 
