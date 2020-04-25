@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 
@@ -74,12 +75,15 @@ namespace Grynwald.Utilities.Configuration
             if (propertyType == typeof(bool))
                 return true;
 
-            if (propertyType == typeof(bool?))
-                return true;
-
             if (propertyType.IsEnum)
                 return true;
 
+            // support nullable value types 
+            if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                return IsSupportedPropertyType(propertyType.GetGenericArguments().Single());
+            }
+            
             return false;
         }
     }

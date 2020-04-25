@@ -25,7 +25,13 @@ namespace Grynwald.Utilities.Configuration.Test
             public bool Setting2 { get; set; }
 
             [ConfigurationValue("root:Setting3")]
-            public TestEnum2 Setting3 { get; set; }
+            public bool? Setting3 { get; set; }
+
+            [ConfigurationValue("root:Setting4")]
+            public TestEnum3 Setting4 { get; set; }
+
+            [ConfigurationValue("root:Setting5")]
+            public TestEnum3? Setting5 { get; set; }
         }
 
         [Fact]
@@ -36,7 +42,9 @@ namespace Grynwald.Utilities.Configuration.Test
             {
                 Setting1 = "value1",
                 Setting2 = true,
-                Setting3 = TestEnum2.Value2
+                Setting3 = false,
+                Setting4 = TestEnum3.Value2,
+                Setting5 = TestEnum3.Value2,
             };
 
             // ACT 
@@ -47,10 +55,14 @@ namespace Grynwald.Utilities.Configuration.Test
             Assert.Contains("root:Setting1", settingsDictionary.Keys);
             Assert.Contains("root:Setting2", settingsDictionary.Keys);
             Assert.Contains("root:Setting3", settingsDictionary.Keys);
+            Assert.Contains("root:Setting4", settingsDictionary.Keys);
+            Assert.Contains("root:Setting5", settingsDictionary.Keys);
 
             Assert.Equal("value1", settingsDictionary["root:Setting1"]);
             Assert.Equal("True", settingsDictionary["root:Setting2"]);
-            Assert.Equal("Value2", settingsDictionary["root:Setting3"]);
+            Assert.Equal("False", settingsDictionary["root:Setting3"]);
+            Assert.Equal("Value2", settingsDictionary["root:Setting4"]);
+            Assert.Equal("Value2", settingsDictionary["root:Setting5"]);
         }
 
         private class TestSettingsClass2
@@ -192,8 +204,50 @@ namespace Grynwald.Utilities.Configuration.Test
             Assert.Equal("False", settingsDictionary["setting2"]);
         }
 
-
         private enum TestEnum2
+        {
+            Value1,
+            Value2
+        }
+
+        private class TestSettingsClass8
+        {
+            [ConfigurationValue("setting1")]
+            public TestEnum2? Setting1 { get; set; }
+
+            [ConfigurationValue("setting2")]
+            public TestEnum2? Setting2 { get; set; }
+
+            [ConfigurationValue("setting3")]
+            public TestEnum2? Setting3 { get; set; }
+        }
+
+
+        [Fact]
+        public void GetSettingsDictionary_correctly_handles_nullable_enums()
+        {
+            // ARRANGE
+            var settingsObject = new TestSettingsClass8()
+            {
+                Setting1 = TestEnum2.Value1,
+                Setting2 = TestEnum2.Value2,
+                Setting3 = null
+            };
+
+            // ACT 
+            var settingsDictionary = ConfigurationBuilderExtensions.GetSettingsDictionary(settingsObject);
+
+            // ASSERT
+            Assert.NotNull(settingsDictionary);
+            Assert.Contains("setting1", settingsDictionary.Keys);
+            Assert.Contains("setting2", settingsDictionary.Keys);
+            Assert.DoesNotContain("setting3", settingsDictionary.Keys);
+
+            Assert.Equal("Value1", settingsDictionary["setting1"]);
+            Assert.Equal("Value2", settingsDictionary["setting2"]);
+        }
+
+        private enum TestEnum3
         {
             Value1,
             Value2
@@ -203,7 +257,8 @@ namespace Grynwald.Utilities.Configuration.Test
         [InlineData(typeof(string))]
         [InlineData(typeof(bool))]
         [InlineData(typeof(bool?))]
-        [InlineData(typeof(TestEnum2))]
+        [InlineData(typeof(TestEnum3))]
+        [InlineData(typeof(TestEnum3?))]
         public void IsSupportedPropertyType_returns_true_for_supported_property_types(Type type)
         {
             Assert.True(ConfigurationBuilderExtensions.IsSupportedPropertyType(type));
