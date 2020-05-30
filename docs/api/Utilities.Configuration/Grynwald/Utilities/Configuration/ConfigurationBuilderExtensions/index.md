@@ -18,9 +18,10 @@ public static class ConfigurationBuilderExtensions
 
 ## Methods
 
-| Name                                                             | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [AddObject(IConfigurationBuilder, object)](methods/AddObject.md) | Adds the specified settings object to the configuration builder. |
+| Name                                                                | Description                                                      |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [AddObject(IConfigurationBuilder, object)](methods/AddObject.md)    | Adds the specified settings object to the configuration builder. |
+| [IsSupportedPropertyType(Type)](methods/IsSupportedPropertyType.md) |                                                                  |
 
 ___
 

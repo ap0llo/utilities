@@ -68,7 +68,7 @@ namespace Grynwald.Utilities.Configuration
             return settings;
         }
 
-        internal static bool IsSupportedPropertyType(Type propertyType)
+        public static bool IsSupportedPropertyType(Type propertyType)
         {
             if (propertyType == typeof(string))
                 return true;
