@@ -26,7 +26,7 @@ namespace Grynwald.Utilities.Logging
         /// <summary>
         /// Initializes a new instance of <see cref="SimpleConsoleLogger"/>
         /// </summary>
-        public SimpleConsoleLogger(SimpleConsoleLoggerConfiguration loggerOptions, string categoryName)
+        public SimpleConsoleLogger(SimpleConsoleLoggerConfiguration loggerOptions, string? categoryName)
         {
             m_CategoryName = String.IsNullOrEmpty(categoryName) ? null : categoryName;
             m_LoggerOptions = loggerOptions ?? throw new ArgumentNullException(nameof(loggerOptions));
