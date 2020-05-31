@@ -177,7 +177,34 @@ namespace Grynwald.Utilities.Configuration.Test
             Assert.Equal("value1", kvp.Value);
         }
 
+
         private class TestSettingsClass7
+        {
+            [ConfigurationValue("setting1")]
+            private string Setting1 { get; set; } = "Some Value";
+
+            [ConfigurationValue("setting2")]
+            protected string Setting2 { get; set; } = "Some Value";
+
+            [ConfigurationValue("setting3")]
+            internal string Setting3 { get; set; } = "Some Value";
+        }
+
+        [Fact]
+        public void GetSettingsDictionary_ignores_non_public_properties()
+        {
+            // ARRANGE
+            var settingsObject = new TestSettingsClass7();
+
+            // ACT 
+            var settingsDictionary = ConfigurationBuilderExtensions.GetSettingsDictionary(settingsObject);
+
+            // ASSERT
+            Assert.NotNull(settingsDictionary);
+            Assert.Empty(settingsDictionary);
+        }
+
+        private class TestSettingsClass8
         {
             [ConfigurationValue("setting1")]
             public bool? Setting1 { get; set; }
@@ -194,7 +221,7 @@ namespace Grynwald.Utilities.Configuration.Test
         public void GetSettingsDictionary_correctly_handles_nullable_bools()
         {
             // ARRANGE
-            var settingsObject = new TestSettingsClass7()
+            var settingsObject = new TestSettingsClass8()
             {
                 Setting1 = true,
                 Setting2 = false,
@@ -220,7 +247,7 @@ namespace Grynwald.Utilities.Configuration.Test
             Value2
         }
 
-        private class TestSettingsClass8
+        private class TestSettingsClass9
         {
             [ConfigurationValue("setting1")]
             public TestEnum2? Setting1 { get; set; }
@@ -236,7 +263,7 @@ namespace Grynwald.Utilities.Configuration.Test
         public void GetSettingsDictionary_correctly_handles_nullable_enums()
         {
             // ARRANGE
-            var settingsObject = new TestSettingsClass8()
+            var settingsObject = new TestSettingsClass9()
             {
                 Setting1 = TestEnum2.Value1,
                 Setting2 = TestEnum2.Value2,
@@ -256,7 +283,7 @@ namespace Grynwald.Utilities.Configuration.Test
             Assert.Equal("Value2", settingsDictionary["setting2"]);
         }
 
-        private class TestSettingsClass9
+        private class TestSettingsClass10
         {
             [ConfigurationValue("setting1")]
             public int? Setting1 { get; set; }
@@ -272,7 +299,7 @@ namespace Grynwald.Utilities.Configuration.Test
         public void GetSettingsDictionary_correctly_handles_nullable_ints()
         {
             // ARRANGE
-            var settingsObject = new TestSettingsClass9()
+            var settingsObject = new TestSettingsClass10()
             {
                 Setting1 = 23,
                 Setting2 = 42,

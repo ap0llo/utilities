@@ -15,8 +15,7 @@ namespace Grynwald.Utilities.Configuration
         /// Adds the specified settings object to the configuration builder.
         /// </summary>
         /// <remarks>
-        /// Adds all values of properties of the object annotated with <see cref="ConfigurationValueAttribute"/>
-        /// to the configuration builder.
+        /// Adds all values of the object's public properties annotated with <see cref="ConfigurationValueAttribute"/> to the configuration builder.
         /// <para>
         /// Supported property types for settings are
         /// <list type="bullet">

@@ -16,7 +16,7 @@ public static IConfigurationBuilder AddObject(this IConfigurationBuilder builder
 
 ## Remarks
 
-Adds all values of properties of the object annotated with [ConfigurationValueAttribute](../../ConfigurationValueAttribute/index.md)to the configuration builder.
+Adds all values of the object's public properties annotated with [ConfigurationValueAttribute](../../ConfigurationValueAttribute/index.md) to the configuration builder.
 
 Supported property types for settings are
 
