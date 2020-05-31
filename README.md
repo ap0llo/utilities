@@ -8,6 +8,7 @@
 |-|-|-|
 | `Grynwald.Utilities`               | [![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.svg)](https://www.nuget.org/packages/Grynwald.Utilities) | [![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities) |
 | `Grynwald.Utilities.Configuration` | [![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.Configuration.svg)](https://www.nuget.org/packages/Grynwald.Utilities.Configuration) | [![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.Configuration.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities.Configuration) |
+| `Grynwald.Utilities.Logging` | [![NuGet](https://img.shields.io/nuget/v/Grynwald.Utilities.Logging.svg)](https://www.nuget.org/packages/Grynwald.Utilities.Logging) | [![MyGet](https://img.shields.io/myget/ap0llo-utilities/vpre/Grynwald.Utilities.Logging.svg?label=myget)](https://www.myget.org/feed/ap0llo-utilities/package/nuget/Grynwald.Utilities.Logging) |
 
 - *Grynwald.Utilities* is a collection of utility functions for usage in C#/.NET projects.
 - *Grynwald.Utilities.Configuration* provides some utilties for working with coniguration, based on [`IConfiguration`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1)
