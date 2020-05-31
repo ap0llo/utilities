@@ -8,12 +8,12 @@ namespace Grynwald.Utilities.Logging
     {
         private static readonly object s_Lock = new object();
         private readonly IDictionary<string, ILogger> m_Loggers = new Dictionary<string, ILogger>();
-        private readonly SimpleConsoleLoggerOptions m_LoggerOptions;
+        private readonly SimpleConsoleLoggerConfiguration m_LoggerOptions;
 
-        public SimpleConsoleLoggerProvider() : this(SimpleConsoleLoggerOptions.Default)
+        public SimpleConsoleLoggerProvider() : this(SimpleConsoleLoggerConfiguration.Default)
         { }
 
-        public SimpleConsoleLoggerProvider(SimpleConsoleLoggerOptions loggerOptions)
+        public SimpleConsoleLoggerProvider(SimpleConsoleLoggerConfiguration loggerOptions)
         {
             m_LoggerOptions = loggerOptions ?? throw new ArgumentNullException(nameof(loggerOptions));
         }

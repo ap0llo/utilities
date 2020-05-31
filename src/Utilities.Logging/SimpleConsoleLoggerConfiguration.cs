@@ -5,12 +5,12 @@ namespace Grynwald.Utilities.Logging
     /// <summary>
     /// Settings for <see cref="SimpleConsoleLogger"/>
     /// </summary>
-    public sealed class SimpleConsoleLoggerOptions
+    public sealed class SimpleConsoleLoggerConfiguration
     {
         /// <summary>
         /// Gets the default logger settings
         /// </summary>
-        public static readonly SimpleConsoleLoggerOptions Default = new SimpleConsoleLoggerOptions(LogLevel.Information, true, true);
+        public static readonly SimpleConsoleLoggerConfiguration Default = new SimpleConsoleLoggerConfiguration(LogLevel.Information, true, true);
 
         /// <summary>
         /// Gets the minimum log level of log messages that are written to the output
@@ -29,12 +29,12 @@ namespace Grynwald.Utilities.Logging
 
 
         /// <summary>
-        /// Initializes a new instance of <see cref="SimpleConsoleLoggerOptions"/>
+        /// Initializes a new instance of <see cref="SimpleConsoleLoggerConfiguration"/>
         /// </summary>
         /// <param name="minimumLogLevel">The value to use for <see cref="MinimumLogLevel"/></param>
         /// <param name="showCategoryName">The value to use for <see cref="ShowCategoryName"/></param>
         /// <param name="enabledColoredOutput">The value to use for <see cref="EnableColoredOutput"/></param>
-        public SimpleConsoleLoggerOptions(LogLevel minimumLogLevel, bool showCategoryName, bool enabledColoredOutput)
+        public SimpleConsoleLoggerConfiguration(LogLevel minimumLogLevel, bool showCategoryName, bool enabledColoredOutput)
         {
             MinimumLogLevel = minimumLogLevel;
             ShowCategoryName = showCategoryName;

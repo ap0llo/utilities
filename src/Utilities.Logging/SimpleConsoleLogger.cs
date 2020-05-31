@@ -8,13 +8,13 @@ namespace Grynwald.Utilities.Logging
     /// </summary>
     /// <remarks>
     /// <see cref="SimpleConsoleLogger"/> is a implementation of <see cref="ILogger"/> that writes log messages to the console.
-    /// The behavior of the logger can be customized using <see cref="SimpleConsoleLoggerOptions"/>.
+    /// The behavior of the logger can be customized using <see cref="SimpleConsoleLoggerConfiguration"/>.
     /// </remarks>
     public sealed class SimpleConsoleLogger : ILogger
     {
         private static readonly object s_ConsoleLock = new object();
 
-        private readonly SimpleConsoleLoggerOptions m_LoggerOptions;
+        private readonly SimpleConsoleLoggerConfiguration m_LoggerOptions;
         private readonly string? m_CategoryName;
 
         private class LoggerScope : IDisposable
@@ -26,7 +26,7 @@ namespace Grynwald.Utilities.Logging
         /// <summary>
         /// Initializes a new instance of <see cref="SimpleConsoleLogger"/>
         /// </summary>
-        public SimpleConsoleLogger(SimpleConsoleLoggerOptions loggerOptions, string categoryName)
+        public SimpleConsoleLogger(SimpleConsoleLoggerConfiguration loggerOptions, string categoryName)
         {
             m_CategoryName = String.IsNullOrEmpty(categoryName) ? null : categoryName;
             m_LoggerOptions = loggerOptions ?? throw new ArgumentNullException(nameof(loggerOptions));
