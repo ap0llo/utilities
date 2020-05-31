@@ -1,4 +1,4 @@
-﻿# SimpleConsoleLoggerOptions Class
+﻿# SimpleConsoleLoggerConfiguration Class
 
 **Namespace:** [Grynwald.Utilities.Logging](../index.md)
 
@@ -7,16 +7,22 @@
 Settings for [SimpleConsoleLogger](../SimpleConsoleLogger/index.md)
 
 ```csharp
-public sealed class SimpleConsoleLoggerOptions
+public sealed class SimpleConsoleLoggerConfiguration
 ```
 
-**Inheritance:** object → SimpleConsoleLoggerOptions
+**Inheritance:** object → SimpleConsoleLoggerConfiguration
 
 ## Constructors
 
-| Name                                                                      | Description                                              |
-| ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| [SimpleConsoleLoggerOptions(LogLevel, bool, bool)](constructors/index.md) | Initializes a new instance of SimpleConsoleLoggerOptions |
+| Name                                                                            | Description                                                    |
+| ------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [SimpleConsoleLoggerConfiguration(LogLevel, bool, bool)](constructors/index.md) | Initializes a new instance of SimpleConsoleLoggerConfiguration |
+
+## Fields
+
+| Name                         | Description                      |
+| ---------------------------- | -------------------------------- |
+| [Default](fields/Default.md) | Gets the default logger settings |
 
 ## Properties
 

@@ -1,6 +1,6 @@
-﻿# SimpleConsoleLoggerOptions.ShowCategoryName Property
+﻿# SimpleConsoleLoggerConfiguration.ShowCategoryName Property
 
-**Declaring Type:** [SimpleConsoleLoggerOptions](../index.md)
+**Declaring Type:** [SimpleConsoleLoggerConfiguration](../index.md)
 
 Gets whether the category name of log messages is included in the output
 

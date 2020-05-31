@@ -20,13 +20,13 @@ public sealed class SimpleConsoleLogger : ILogger
 
 ## Remarks
 
-SimpleConsoleLogger is a implementation of ILogger that writes log messages to the console.             The behavior of the logger can be customized using [SimpleConsoleLoggerOptions](../SimpleConsoleLoggerOptions/index.md).
+SimpleConsoleLogger is a implementation of ILogger that writes log messages to the console.             The behavior of the logger can be customized using [SimpleConsoleLoggerConfiguration](../SimpleConsoleLoggerConfiguration/index.md).
 
 ## Constructors
 
-| Name                                                                             | Description                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [SimpleConsoleLogger(SimpleConsoleLoggerOptions, string)](constructors/index.md) | Initializes a new instance of SimpleConsoleLogger |
+| Name                                                                                   | Description                                       |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [SimpleConsoleLogger(SimpleConsoleLoggerConfiguration, string)](constructors/index.md) | Initializes a new instance of SimpleConsoleLogger |
 
 ## Methods
 

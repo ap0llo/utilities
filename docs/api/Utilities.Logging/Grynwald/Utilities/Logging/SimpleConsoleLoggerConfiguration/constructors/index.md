@@ -1,11 +1,11 @@
-﻿# SimpleConsoleLoggerOptions Constructors
+﻿# SimpleConsoleLoggerConfiguration Constructors
 
-**Declaring Type:** [SimpleConsoleLoggerOptions](../index.md)
+**Declaring Type:** [SimpleConsoleLoggerConfiguration](../index.md)
 
-Initializes a new instance of [SimpleConsoleLoggerOptions](../index.md)
+Initializes a new instance of [SimpleConsoleLoggerConfiguration](../index.md)
 
 ```csharp
-public SimpleConsoleLoggerOptions(LogLevel minimumLogLevel, bool showCategoryName, bool enabledColoredOutput);
+public SimpleConsoleLoggerConfiguration(LogLevel minimumLogLevel, bool showCategoryName, bool enabledColoredOutput);
 ```
 
 ## Parameters

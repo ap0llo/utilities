@@ -4,10 +4,12 @@
 
 ## Classes
 
-| Name                                                              | Description                                                      |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [SimpleConsoleLogger](SimpleConsoleLogger/index.md)               | A simple console logger that implements ILogger                  |
-| [SimpleConsoleLoggerOptions](SimpleConsoleLoggerOptions/index.md) | Settings for [SimpleConsoleLogger](SimpleConsoleLogger/index.md) |
+| Name                                                                          | Description                                                                                               |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [LoggerFactoryExtensions](LoggerFactoryExtensions/index.md)                   | Extension methods for ILoggerFactory to ease usage o [SimpleConsoleLogger](SimpleConsoleLogger/index.md). |
+| [SimpleConsoleLogger](SimpleConsoleLogger/index.md)                           | A simple console logger that implements ILogger                                                           |
+| [SimpleConsoleLoggerConfiguration](SimpleConsoleLoggerConfiguration/index.md) | Settings for [SimpleConsoleLogger](SimpleConsoleLogger/index.md)                                          |
+| [SimpleConsoleLoggerProvider](SimpleConsoleLoggerProvider/index.md)           | Logger provider for [SimpleConsoleLogger](SimpleConsoleLogger/index.md)                                   |
 
 ___
 

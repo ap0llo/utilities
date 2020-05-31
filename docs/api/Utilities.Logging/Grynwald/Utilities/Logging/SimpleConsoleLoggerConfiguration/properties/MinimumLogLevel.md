@@ -1,6 +1,6 @@
-﻿# SimpleConsoleLoggerOptions.MinimumLogLevel Property
+﻿# SimpleConsoleLoggerConfiguration.MinimumLogLevel Property
 
-**Declaring Type:** [SimpleConsoleLoggerOptions](../index.md)
+**Declaring Type:** [SimpleConsoleLoggerConfiguration](../index.md)
 
 Gets the minimum log level of log messages that are written to the output
 

@@ -1,6 +1,6 @@
-﻿# SimpleConsoleLoggerOptions.EnableColoredOutput Property
+﻿# SimpleConsoleLoggerConfiguration.EnableColoredOutput Property
 
-**Declaring Type:** [SimpleConsoleLoggerOptions](../index.md)
+**Declaring Type:** [SimpleConsoleLoggerConfiguration](../index.md)
 
 Gets whether console output uses colors to differentiate between log levels
 

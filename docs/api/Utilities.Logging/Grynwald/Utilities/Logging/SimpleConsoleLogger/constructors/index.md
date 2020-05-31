@@ -5,12 +5,12 @@
 Initializes a new instance of [SimpleConsoleLogger](../index.md)
 
 ```csharp
-public SimpleConsoleLogger(SimpleConsoleLoggerOptions loggerOptions, string categoryName);
+public SimpleConsoleLogger(SimpleConsoleLoggerConfiguration loggerOptions, string categoryName);
 ```
 
 ## Parameters
 
-`loggerOptions`  [SimpleConsoleLoggerOptions](../../SimpleConsoleLoggerOptions/index.md)
+`loggerOptions`  [SimpleConsoleLoggerConfiguration](../../SimpleConsoleLoggerConfiguration/index.md)
 
 `categoryName`  string
 

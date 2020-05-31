@@ -4,21 +4,30 @@ using Microsoft.Extensions.Logging;
 
 namespace Grynwald.Utilities.Logging
 {
-    internal sealed class SimpleConsoleLoggerProvider : ILoggerProvider
+    /// <summary>
+    /// Logger provider for <see cref="SimpleConsoleLogger"/>
+    /// </summary>
+    public sealed class SimpleConsoleLoggerProvider : ILoggerProvider
     {
         private static readonly object s_Lock = new object();
         private readonly IDictionary<string, ILogger> m_Loggers = new Dictionary<string, ILogger>();
         private readonly SimpleConsoleLoggerConfiguration m_LoggerOptions;
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="SimpleConsoleLoggerProvider"/>
+        /// </summary>
         public SimpleConsoleLoggerProvider() : this(SimpleConsoleLoggerConfiguration.Default)
         { }
 
+        /// <summary>
+        /// Initializes a new instance of <see cref="SimpleConsoleLoggerProvider"/>
+        /// </summary>
         public SimpleConsoleLoggerProvider(SimpleConsoleLoggerConfiguration loggerOptions)
         {
             m_LoggerOptions = loggerOptions ?? throw new ArgumentNullException(nameof(loggerOptions));
         }
 
-
+        /// <inheritdoc />
         public ILogger CreateLogger(string categoryName)
         {
             lock (s_Lock)
@@ -36,6 +45,7 @@ namespace Grynwald.Utilities.Logging
             }
         }
 
+        /// <inheritdoc />
         public void Dispose()
         {
             lock (s_Lock)
