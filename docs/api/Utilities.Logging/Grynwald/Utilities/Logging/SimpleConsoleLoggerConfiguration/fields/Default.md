@@ -5,7 +5,6 @@
 Gets the default logger settings
 
 ```csharp
-[Nullable(1)]
 public static readonly SimpleConsoleLoggerConfiguration Default;
 ```
 

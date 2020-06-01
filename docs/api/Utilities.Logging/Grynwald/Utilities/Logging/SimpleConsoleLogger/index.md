@@ -7,14 +7,10 @@
 A simple console logger that implements ILogger
 
 ```csharp
-[NullableContext(1)]
-[Nullable(0)]
 public sealed class SimpleConsoleLogger : ILogger
 ```
 
 **Inheritance:** object → SimpleConsoleLogger
-
-**Attributes:** NullableContextAttribute,NullableAttribute
 
 **Implements:** ILogger
 

@@ -7,14 +7,10 @@
 Logger provider for [SimpleConsoleLogger](../SimpleConsoleLogger/index.md)
 
 ```csharp
-[NullableContext(1)]
-[Nullable(0)]
 public sealed class SimpleConsoleLoggerProvider : ILoggerProvider, IDisposable
 ```
 
 **Inheritance:** object → SimpleConsoleLoggerProvider
-
-**Attributes:** NullableContextAttribute,NullableAttribute
 
 **Implements:** ILoggerProvider,IDisposable
 

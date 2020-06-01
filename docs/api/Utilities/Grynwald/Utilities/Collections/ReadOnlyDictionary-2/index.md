@@ -50,11 +50,11 @@ ReadOnlyDictionary\<T1, T2\> provides a empty singleton dictionary             a
 
 ## Methods
 
-| Name                                                 | Description |
-| ---------------------------------------------------- | ----------- |
-| [ContainsKey(TKey)](methods/ContainsKey.md)          |             |
-| [GetEnumerator()](methods/GetEnumerator.md)          |             |
-| [TryGetValue(TKey, TValue&)](methods/TryGetValue.md) |             |
+| Name                                                | Description |
+| --------------------------------------------------- | ----------- |
+| [ContainsKey(TKey)](methods/ContainsKey.md)         |             |
+| [GetEnumerator()](methods/GetEnumerator.md)         |             |
+| [TryGetValue(TKey, TValue)](methods/TryGetValue.md) |             |
 
 ## Example
 

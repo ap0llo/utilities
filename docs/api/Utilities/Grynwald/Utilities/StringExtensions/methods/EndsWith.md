@@ -5,8 +5,6 @@
 Determines if the string ends with the specified character.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static bool EndsWith(this string str, char c);
 ```
 

@@ -5,7 +5,7 @@
 Executes the specified query and converts the value of the first column of the first returned row to the specified type `T`.
 
 ```csharp
-public static T ExecuteScalar<T>(this IDbConnection connection, string sql, ValueTuple<string, object>[] parameters);
+public static T ExecuteScalar<T>(this IDbConnection connection, string sql, [TupleElementNames(Mono.Cecil.CustomAttributeArgument[])]params ValueTuple<string, object>[] parameters);
 ```
 
 ## Type Parameters

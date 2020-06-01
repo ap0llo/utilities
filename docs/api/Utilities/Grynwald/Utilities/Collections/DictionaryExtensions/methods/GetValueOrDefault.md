@@ -84,8 +84,6 @@ TValue
 Tries to get the element with the specified key. If the dictionary does not contain a matching element, default(TValue) is returned
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key);
 ```
 
@@ -125,8 +123,6 @@ TValue
 Tries to get the element with the specified key. If the dictionary does not contain a matching element, `default(TValue)` is returned
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key, TValue defaultValue);
 ```
 

@@ -59,7 +59,7 @@ The type of values in the dictionary.
 | [GetEnumerator()](methods/GetEnumerator.md)                                             | Returns an enumerator that iterates through the collection.                                    |
 | [Remove(KeyValuePair\<TKey, TValue\>)](methods/Remove.md#removekeyvaluepairtkey-tvalue) | Removes the first occurrence of a specific object from the ICollection\<T\>.                   |
 | [Remove(TKey)](methods/Remove.md#removetkey)                                            | Removes the element with the specified key from the IDictionary\<T1, T2\>.                     |
-| [TryGetValue(TKey, TValue&)](methods/TryGetValue.md)                                    |                                                                                                |
+| [TryGetValue(TKey, TValue)](methods/TryGetValue.md)                                     |                                                                                                |
 
 ___
 

@@ -5,7 +5,7 @@
 Executes the specified query and returns the number of affected rows.
 
 ```csharp
-public static int ExecuteNonQuery(this IDbConnection connection, string sql, ValueTuple<string, object>[] parameters);
+public static int ExecuteNonQuery(this IDbConnection connection, string sql, [TupleElementNames(Mono.Cecil.CustomAttributeArgument[])]params ValueTuple<string, object>[] parameters);
 ```
 
 ## Parameters

@@ -7,14 +7,10 @@
 Extension methods for ILoggerFactory to ease usage o [SimpleConsoleLogger](../SimpleConsoleLogger/index.md).
 
 ```csharp
-[NullableContext(1)]
-[Nullable(0)]
 public static class LoggerFactoryExtensions
 ```
 
 **Inheritance:** object → LoggerFactoryExtensions
-
-**Attributes:** NullableContextAttribute,NullableAttribute
 
 ## Methods
 

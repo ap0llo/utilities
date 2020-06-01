@@ -18,9 +18,7 @@
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
-public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, object[] values);
+public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params object[] values);
 ```
 
 ### Parameters
@@ -54,9 +52,7 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
-public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, string[] values);
+public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params string[] values);
 ```
 
 ### Parameters
@@ -90,9 +86,7 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
-public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, object[] values);
+public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params object[] values);
 ```
 
 ### Parameters
@@ -126,9 +120,7 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
-public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, string[] values);
+public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params string[] values);
 ```
 
 ### Parameters
@@ -162,8 +154,6 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, char separator, IEnumerable<T> values);
 ```
 
@@ -202,8 +192,6 @@ Returns the specified StringBuilder.
 Appends the members of a collection, separated by the specified separator.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values);
 ```
 
