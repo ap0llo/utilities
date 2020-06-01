@@ -7,14 +7,10 @@
 Provides extensions methods for IConfigurationBuilder
 
 ```csharp
-[NullableContext(1)]
-[Nullable(0)]
 public static class ConfigurationBuilderExtensions
 ```
 
 **Inheritance:** object → ConfigurationBuilderExtensions
-
-**Attributes:** NullableContextAttribute,NullableAttribute
 
 ## Methods
 

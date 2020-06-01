@@ -7,15 +7,13 @@
 Marks a property as setting to be imported through [AddObject(IConfigurationBuilder, object)](../ConfigurationBuilderExtensions/methods/AddObject.md).    
 
 ```csharp
-[NullableContext(1)]
-[Nullable(0)]
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.All, AllowMultiple = False, Inherited = True)]
+[AttributeUsage(AttributeTargets.Property, AllowMultiple = False, Inherited = True)]
 public sealed class ConfigurationValueAttribute : Attribute
 ```
 
 **Inheritance:** object → Attribute → ConfigurationValueAttribute
 
-**Attributes:** NullableContextAttribute,NullableAttribute,AttributeUsageAttribute
+**Attributes:** AttributeUsageAttribute
 
 ## Constructors
 

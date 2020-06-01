@@ -5,8 +5,6 @@
 Determines if the string starts with the specified character.
 
 ```csharp
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static bool StartsWith(this string str, char c);
 ```
 

@@ -3,14 +3,14 @@
 **Declaring Type:** [ReadOnlyDictionary\<TKey, TValue\>](../index.md)
 
 ```csharp
-public bool TryGetValue(TKey key, TValue& value);
+public bool TryGetValue(TKey key, out TValue value);
 ```
 
 ## Parameters
 
 `key`  TKey
 
-`value`  TValue&
+`value`  TValue
 
 ## Returns
 

@@ -14,9 +14,6 @@
 Creates a new HashSet\<T\> with elements copied from the enumerable using the default equality comparer.
 
 ```csharp
-[HiddenFromReferenceAssembly("net472")]
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable);
 ```
 
@@ -49,9 +46,6 @@ HashSet\<T\>
 Creates a new HashSet\<T\> with elements copied from the enumerable using the specified equality comparer.
 
 ```csharp
-[HiddenFromReferenceAssembly("net472")]
-[HiddenFromReferenceAssembly("netcoreapp2.0")]
-[HiddenFromReferenceAssembly("netstandard2.1")]
 public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer);
 ```
 
