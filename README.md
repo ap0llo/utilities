@@ -3,6 +3,8 @@
 ## Overview
 
 [![Build Status](https://dev.azure.com/ap0llo/OSS/_apis/build/status/utilities?branchName=master)](https://dev.azure.com/ap0llo/OSS/_build/latest?definitionId=8?branchName=master)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![Renovate](https://img.shields.io/badge/Renovate-enabled-brightgreen)](https://renovatebot.com/)
 
 | Package | NuGet.org | MyGet|
 |-|-|-|
