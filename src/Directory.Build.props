@@ -1,8 +1,8 @@
 <Project>
 
-	<!-- Output paths -->
 	<PropertyGroup>
 		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<!-- Output paths -->
 		<BaseOutputPath Condition="'$(BUILD_BINARIESDIRECTORY)' != '' ">$(BUILD_BINARIESDIRECTORY)</BaseOutputPath>
 		<BaseOutputPath Condition="'$(BaseOutputPath)' == '' ">$(MSBuildThisFileDirectory)../Build/</BaseOutputPath>
 		<BaseOutputPath Condition="!HasTrailingSlash('BaseOutputPath')">$(BaseOutputPath)/</BaseOutputPath>
@@ -20,14 +20,6 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
 
-	<!--NuGet Settings -->
-	<PropertyGroup>
-		<Authors>Andreas Gruenwald</Authors>
-		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>		
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Description>A collection of utility functions for usage in C#/.NET projects</Description>
-	</PropertyGroup>
-
 	<!-- Enable deterministic builds when building in Azure DevOps-->
 	<PropertyGroup Condition=" '$(TF_BUILD)' == 'true' ">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
@@ -43,5 +35,22 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
 	</ItemGroup>
+
+	
+	<!-- Disable nullable support on .Net Core 2.1 -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+		<Nullable>disable</Nullable>
+		<NoWarn>8632</NoWarn>  <!-- Suppress warning about nullable annotation in the source code although nullable is disabled-->
+	</PropertyGroup>
+
+	<!--NuGet package properties -->
+	<PropertyGroup>
+		<Authors>Andreas Gruenwald</Authors>
+		<PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>A collection of utility functions for usage in C#/.NET projects</Description>
+		<Copyright>Copyright (c) 2017-2020, Andreas Gruenwald</Copyright>
+	</PropertyGroup>
+
 
 </Project>
