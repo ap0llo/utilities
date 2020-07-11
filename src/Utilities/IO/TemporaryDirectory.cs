@@ -17,8 +17,7 @@ namespace Grynwald.Utilities.IO
         /// Creates a new temporary directory in the current user's temp directory (as returned by <see cref="Path.GetTempPath"/>.
         /// </summary>
         public TemporaryDirectory() : this(Path.GetTempPath())
-        {
-        }
+        { }
 
         /// <summary>
         /// Creates a new temporary directory in the specified directory.
@@ -26,6 +25,9 @@ namespace Grynwald.Utilities.IO
         /// <param name="basePath">The path of the directory to create the temporary directory in.</param>
         public TemporaryDirectory(string basePath)
         {
+            if (String.IsNullOrWhiteSpace(basePath))
+                throw new ArgumentException("Value must not be null or whitespace", nameof(basePath));
+
             FullName = Path.Combine(basePath, Path.GetRandomFileName());
             Directory.CreateDirectory(FullName);
         }
@@ -53,5 +55,8 @@ namespace Grynwald.Utilities.IO
         /// Converts the temporary directory to a string (using the <see cref="FullName"/> property as value).
         /// </summary>        
         public static implicit operator string(TemporaryDirectory instance) => instance?.FullName;
+
+        /// <inheritdoc />
+        public override string ToString() => FullName;
     }
 }
