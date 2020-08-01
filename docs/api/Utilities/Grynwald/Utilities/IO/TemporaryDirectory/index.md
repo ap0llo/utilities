@@ -29,9 +29,10 @@ public sealed class TemporaryDirectory : IDisposable
 
 ## Methods
 
-| Name                            | Description                      |
-| ------------------------------- | -------------------------------- |
-| [Dispose()](methods/Dispose.md) | Deletes the temporary directory. |
+| Name                              | Description                                          |
+| --------------------------------- | ---------------------------------------------------- |
+| [Dispose()](methods/Dispose.md)   | Deletes the temporary directory.                     |
+| [ToString()](methods/ToString.md) | Returns a string that represents the current object. |
 
 ## Operators
 
