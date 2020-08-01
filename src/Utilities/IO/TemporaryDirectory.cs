@@ -37,6 +37,14 @@ namespace Grynwald.Utilities.IO
         /// </summary>
         public void Dispose()
         {
+            // remove read-only flag from all files
+            var files = new DirectoryInfo(FullName).GetFiles("*", SearchOption.AllDirectories);
+            foreach (var file in files)
+            {
+                file.IsReadOnly = false;
+            }
+
+            // recursively delete the directory
             try
             {
                 Directory.Delete(FullName, recursive: true);
