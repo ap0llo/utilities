@@ -42,5 +42,14 @@ namespace Grynwald.Utilities.Test
 
             Assert.False(Directory.Exists(sut.FullName));
         }
+
+        [Fact]
+        public void Directory_can_be_disposed_multiple_times()
+        {
+            var sut = new TemporaryDirectory();
+
+            sut.Dispose();
+            sut.Dispose();
+        }
     }
 }
