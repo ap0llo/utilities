@@ -14,12 +14,16 @@ public static class StringExtensions
 
 ## Methods
 
-| Name                                                | Description                                                        |
-| --------------------------------------------------- | ------------------------------------------------------------------ |
-| [EndsWith(string, char)](methods/EndsWith.md)       | Determines if the string ends with the specified character.        |
-| [StartsWith(string, char)](methods/StartsWith.md)   | Determines if the string starts with the specified character.      |
-| [ToStream(string)](methods/ToStream.md)             | Creates a in\-memory stream and writes the string's content to it. |
-| [TrimEmptyLines(string)](methods/TrimEmptyLines.md) | Removes leading and trailing empty lines from the string.          |
+| Name                                                                                                                   | Description                                                        |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [ComputeHash(string)](methods/ComputeHash.md#computehashstring)                                                        | Computes the SHA1\-hash of the string.                             |
+| [ComputeHash(string, HashAlgorithmName)](methods/ComputeHash.md#computehashstring-hashalgorithmname)                   | Computes the hash of the string using the specified algorithm.     |
+| [ComputeHashString(string)](methods/ComputeHashString.md#computehashstringstring)                                      | Computes the SHA1\-hash of the string.                             |
+| [ComputeHashString(string, HashAlgorithmName)](methods/ComputeHashString.md#computehashstringstring-hashalgorithmname) | Computes the hash of the string using the specified algorithm.     |
+| [EndsWith(string, char)](methods/EndsWith.md)                                                                          | Determines if the string ends with the specified character.        |
+| [StartsWith(string, char)](methods/StartsWith.md)                                                                      | Determines if the string starts with the specified character.      |
+| [ToStream(string)](methods/ToStream.md)                                                                                | Creates a in\-memory stream and writes the string's content to it. |
+| [TrimEmptyLines(string)](methods/TrimEmptyLines.md)                                                                    | Removes leading and trailing empty lines from the string.          |
 
 ___
 

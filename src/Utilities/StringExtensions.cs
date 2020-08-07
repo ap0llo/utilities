@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Grynwald.Utilities
 {
@@ -19,8 +21,8 @@ namespace Grynwald.Utilities
         /// <seealso cref="MemoryStream"/>
         public static Stream ToStream(this string s)
         {
-            MemoryStream stream = new MemoryStream();
-            StreamWriter writer = new StreamWriter(stream);
+            var stream = new MemoryStream();
+            var writer = new StreamWriter(stream);
             writer.Write(s);
             writer.Flush();
             stream.Position = 0;
@@ -98,7 +100,7 @@ namespace Grynwald.Utilities
                         lastNewLine = i;
                     }
 
-                    if (!char.IsWhiteSpace(value[i]))
+                    if (!Char.IsWhiteSpace(value[i]))
                     {
                         endOfWhiteSpace = i;
                         break;
@@ -128,7 +130,7 @@ namespace Grynwald.Utilities
                         firstNewLine = i;
                     }
 
-                    if (!char.IsWhiteSpace(value[i]))
+                    if (!Char.IsWhiteSpace(value[i]))
                     {
                         startOfWhiteSpace = i;
                         break;
@@ -152,6 +154,50 @@ namespace Grynwald.Utilities
             }
 
             return value;
+        }
+
+        /// <summary>
+        /// Computes the SHA1-hash of the string.
+        /// </summary>
+        /// <param name="value">The string which's hash to compute.</param>
+        /// <returns>Returns the hash value of the input string encoded as hex-string.</returns>
+        public static string ComputeHashString(this string value) => ComputeHashString(value, HashAlgorithmName.SHA1);
+
+        /// <summary>
+        /// Computes the hash of the string using the specified algorithm.
+        /// </summary>
+        /// <param name="value">The string which's hash to compute.</param>
+        /// <param name="algorithm">The hash algorithm to use for computing the hash.</param>
+        /// <returns>Returns the hash value of the input string encoded as hex-string.</returns>
+        public static string ComputeHashString(this string value, HashAlgorithmName algorithm)
+        {
+            var sb = new StringBuilder();
+            foreach (var b in ComputeHash(value, algorithm))
+            {
+                sb.Append(b.ToString("X2"));
+            }
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Computes the SHA1-hash of the string.
+        /// </summary>
+        /// <param name="value">The string which's hash to compute.</param>
+        /// <returns>Returns the hash value as byte-array.</returns>
+        public static byte[] ComputeHash(this string value) => ComputeHash(value, HashAlgorithmName.SHA1);
+
+        /// <summary>
+        /// Computes the hash of the string using the specified algorithm.
+        /// </summary>
+        /// <param name="value">The string which's hash to compute.</param>
+        /// <param name="algorithm">The hash algorithm to use for computing the hash.</param>
+        /// <returns>Returns the hash value as byte-array.</returns>
+        public static byte[] ComputeHash(this string value, HashAlgorithmName algorithm)
+        {
+            using var implementation = HashAlgorithm.Create(algorithm.ToString());
+            var bytes = Encoding.UTF8.GetBytes(value);
+            return implementation.ComputeHash(bytes);
         }
     }
 }
