@@ -61,7 +61,7 @@ namespace Grynwald.Utilities.Configuration
                 var value = property.GetMethod.Invoke(settingsObject, Array.Empty<object>());
 
                 if (value is object)
-                    settings.Add(attribute.Key, Convert.ToString(value));
+                    settings.Add(attribute.Key, Convert.ToString(value)!);
             }
 
             return settings;
