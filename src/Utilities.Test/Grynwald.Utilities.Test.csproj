@@ -8,8 +8,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
     <PackageReference Include="Mono.Cecil" Version="0.11.3" />
-    <PackageReference Include="NuGet.Frameworks" Version="5.7.0" />
-    <PackageReference Include="NuGet.Packaging" Version="5.7.0" />
+    <PackageReference Include="NuGet.Frameworks" Version="5.8.0+830c8be45dbbccd411ecf6080abff0c2c98079cf" />
+    <PackageReference Include="NuGet.Packaging" Version="5.8.0+ebc4f817473f08c3705ed0e5c58c223372f36f7b" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" PrivateAssets="all" />
   </ItemGroup>
