@@ -13,7 +13,7 @@
     
   <!-- InheritDoc -->
   <ItemGroup>
-    <PackageReference Include="SauceControl.InheritDoc" Version="1.0.0" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Include="SauceControl.InheritDoc" Version="1.1.1" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
   </ItemGroup>  
   <!-- 
     Workaround for malformed xml documentation file shipping for netstandard2.0.
