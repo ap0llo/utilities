@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DocumentationFile>$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <!-- 
+    <!--
       By default, all warnings are treated as errors.
       However, some warnings can be ignored:
-      - CS1591: Missing XML comment for publicly visible type or member 
+      - CS1591: Missing XML comment for publicly visible type or member
       - NU5128, NU5131: NuGet warnings that pack emits because of the
         reference assemblies included in the package.
     -->
@@ -20,8 +20,11 @@
   <!-- InheritDoc -->
   <ItemGroup>
     <PackageReference Include="SauceControl.InheritDoc" Version="1.1.1" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-  </ItemGroup>  
-  <!-- 
+  </ItemGroup>
+  <PropertyGroup>
+    <InheritDocEnabled>true</InheritDocEnabled>
+  </PropertyGroup>
+  <!--
     Workaround for malformed xml documentation file shipping for netstandard2.0.
     See https://github.com/saucecontrol/InheritDoc#known-issues
   -->
@@ -29,7 +32,7 @@
     <PackageDownload Include="NETStandard.Library.Ref" Version="[2.1.0]" />
     <InheritDocReference Include="$([MSBuild]::EnsureTrailingSlash('$(NugetPackageRoot)'))netstandard.library.ref\2.1.0\ref\netstandard2.1\netstandard.xml" />
   </ItemGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' "> 
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
     <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);IDT001</MSBuildWarningsAsMessages>
   </PropertyGroup>
 
@@ -48,5 +51,5 @@
       <_Parameter1>$(MSBuildProjectName).Test</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
-  
+
 </Project>
