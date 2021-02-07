@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Grynwald.Utilities.Configuration.Test
@@ -319,6 +321,63 @@ namespace Grynwald.Utilities.Configuration.Test
             Assert.Equal("42", settingsDictionary["setting2"]);
         }
 
+        private class TestSettingsClass11
+        {
+            [ConfigurationValue("setting1")]
+            public string[] Setting1 { get; set; } = Array.Empty<string>();
+        }
+
+        [Fact]
+        public void GetSettingsDictionary_correctly_handles_arrays()
+        {
+            // ARRANGE
+            var settingsObject = new TestSettingsClass11()
+            {
+                Setting1 = new[] { "value1", "value2" }
+            };
+
+            // ACT 
+            var settingsDictionary = ConfigurationBuilderExtensions.GetSettingsDictionary(settingsObject);
+
+            // ASSERT
+            Assert.NotNull(settingsDictionary);
+            Assert.Equal(2, settingsDictionary.Count);
+            Assert.Contains("setting1:0", settingsDictionary.Keys);
+            Assert.Contains("setting1:1", settingsDictionary.Keys);
+
+            Assert.Equal("value1", settingsDictionary["setting1:0"]);
+            Assert.Equal("value2", settingsDictionary["setting1:1"]);
+        }
+
+        private class TestSettingsClass12
+        {
+            [ConfigurationValue("setting1")]
+            public IEnumerable<string> Setting1 { get; set; } = Enumerable.Empty<string>();
+        }
+
+        [Fact]
+        public void GetSettingsDictionary_correctly_handles_IEnumerables()
+        {
+            // ARRANGE
+            var settingsObject = new TestSettingsClass12()
+            {
+                Setting1 = Enumerable.Range(1, 2).Select(i => $"value{i}")
+            };
+
+            // ACT 
+            var settingsDictionary = ConfigurationBuilderExtensions.GetSettingsDictionary(settingsObject);
+
+            // ASSERT
+            Assert.NotNull(settingsDictionary);
+            Assert.Equal(2, settingsDictionary.Count);
+            Assert.Contains("setting1:0", settingsDictionary.Keys);
+            Assert.Contains("setting1:1", settingsDictionary.Keys);
+
+            Assert.Equal("value1", settingsDictionary["setting1:0"]);
+            Assert.Equal("value2", settingsDictionary["setting1:1"]);
+        }
+
+
         private enum TestEnum3
         {
             Value1,
@@ -326,6 +385,7 @@ namespace Grynwald.Utilities.Configuration.Test
         }
 
         [Theory]
+        // scalar types
         [InlineData(typeof(string))]
         [InlineData(typeof(bool))]
         [InlineData(typeof(bool?))]
@@ -333,6 +393,22 @@ namespace Grynwald.Utilities.Configuration.Test
         [InlineData(typeof(TestEnum3?))]
         [InlineData(typeof(int))]
         [InlineData(typeof(int?))]
+        // Arrays
+        [InlineData(typeof(string[]))]
+        [InlineData(typeof(bool[]))]
+        [InlineData(typeof(bool?[]))]
+        [InlineData(typeof(TestEnum3[]))]
+        [InlineData(typeof(TestEnum3?[]))]
+        [InlineData(typeof(int[]))]
+        [InlineData(typeof(int?[]))]
+        // IEnumerables
+        [InlineData(typeof(IEnumerable<string>))]
+        [InlineData(typeof(IEnumerable<bool>))]
+        [InlineData(typeof(IEnumerable<bool?>))]
+        [InlineData(typeof(IEnumerable<TestEnum3>))]
+        [InlineData(typeof(IEnumerable<TestEnum3?>))]
+        [InlineData(typeof(IEnumerable<int>))]
+        [InlineData(typeof(IEnumerable<int?>))]
         public void IsSupportedPropertyType_returns_true_for_supported_property_types(Type type)
         {
             Assert.True(ConfigurationBuilderExtensions.IsSupportedPropertyType(type));

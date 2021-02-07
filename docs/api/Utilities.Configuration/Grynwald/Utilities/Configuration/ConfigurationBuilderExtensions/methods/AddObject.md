@@ -27,13 +27,14 @@ public static IConfigurationBuilder AddObject(this IConfigurationBuilder builder
 
 Adds all values of the object's public properties annotated with [ConfigurationValueAttribute](../../ConfigurationValueAttribute/index.md) to the configuration builder.
 
-Supported property types for settings are
+Supported property types for settings are:
 
 - string
 - bool
 - int
 - Enum types
 - Nullable values of bool, int and enum types
+- Arrays and IEnumerable\<T\>s of above types.
 
 When `settingsObject` is `null`, no settings are added.
 

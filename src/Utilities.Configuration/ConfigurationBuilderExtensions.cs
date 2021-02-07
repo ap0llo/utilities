@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -17,13 +18,14 @@ namespace Grynwald.Utilities.Configuration
         /// <remarks>
         /// Adds all values of the object's public properties annotated with <see cref="ConfigurationValueAttribute"/> to the configuration builder.
         /// <para>
-        /// Supported property types for settings are
+        /// Supported property types for settings are:
         /// <list type="bullet">
         ///     <item><description><see cref="string"/></description></item>
         ///     <item><description><see cref="bool"/></description></item>
         ///     <item><description><see cref="int"/></description></item>
         ///     <item><description>Enum types</description></item>
         ///     <item><description>Nullable values of <see cref="bool"/>, <see cref="int"/> and enum types</description></item>
+        ///     <item><description>Arrays and <see cref="IEnumerable{T}"/>s of above types.</description></item>
         /// </list>
         /// </para>
         /// <para>
@@ -60,14 +62,34 @@ namespace Grynwald.Utilities.Configuration
 
                 var value = property.GetMethod.Invoke(settingsObject, Array.Empty<object>());
 
-                if (value is object)
+                if (value is null)
+                    continue;
+
+                if (IsSupportedCollectionType(property.PropertyType))
+                {
+                    int i = 0;
+                    foreach (var item in (IEnumerable)value)
+                    {
+                        settings.Add($"{attribute.Key}:{i++}", Convert.ToString(item)!);
+                    }
+                }
+                else
+                {
                     settings.Add(attribute.Key, Convert.ToString(value)!);
+
+                }
             }
 
             return settings;
         }
 
         public static bool IsSupportedPropertyType(Type propertyType)
+        {
+            return IsSupportedSimpleType(propertyType) || IsSupportedCollectionType(propertyType);
+        }
+
+
+        private static bool IsSupportedSimpleType(Type propertyType)
         {
             if (propertyType == typeof(string))
                 return true;
@@ -87,7 +109,24 @@ namespace Grynwald.Utilities.Configuration
                 return IsSupportedPropertyType(propertyType.GetGenericArguments().Single());
             }
 
+
             return false;
         }
+
+        private static bool IsSupportedCollectionType(Type propertyType)
+        {
+            if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(IEnumerable<>))
+            {
+                return IsSupportedSimpleType(propertyType.GetGenericArguments().Single());
+            }
+
+            if (propertyType.IsArray && propertyType.GetArrayRank() == 1)
+            {
+                return IsSupportedSimpleType(propertyType.GetElementType()!);
+            }
+
+            return false;
+        }
+
     }
 }
