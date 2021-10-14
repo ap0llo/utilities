@@ -30,8 +30,8 @@ public sealed class Wildcard : IEquatable<Wildcard>
 
 | Name                                                 | Description                                                                       |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [Equals(object)](methods/Equals.md#equalsobject)     | Determines whether the specified object is equal to the current object.           |
 | [Equals(Wildcard)](methods/Equals.md#equalswildcard) | Indicates whether the current object is equal to another object of the same type. |
+| [Equals(object)](methods/Equals.md#equalsobject)     | Determines whether the specified object is equal to the current object.           |
 | [GetHashCode()](methods/GetHashCode.md)              | Serves as the default hash function.                                              |
 | [IsMatch(string)](methods/IsMatch.md)                | Determines whether the wildcard matches the specified input string.               |
 
