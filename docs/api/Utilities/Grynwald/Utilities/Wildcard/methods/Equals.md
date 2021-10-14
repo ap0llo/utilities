@@ -15,28 +15,8 @@
 
 | Signature                           | Description                                                                       |
 | ----------------------------------- | --------------------------------------------------------------------------------- |
-| [Equals(object)](#equalsobject)     | Determines whether the specified object is equal to the current object.           |
 | [Equals(Wildcard)](#equalswildcard) | Indicates whether the current object is equal to another object of the same type. |
-
-## Equals(object)
-
-Determines whether the specified object is equal to the current object.
-
-```csharp
-public bool Equals(object obj);
-```
-
-### Parameters
-
-`obj`  object
-
-The object to compare with the current object.
-
-### Returns
-
-bool
-
- if the specified object  is equal to the current object; otherwise, .
+| [Equals(object)](#equalsobject)     | Determines whether the specified object is equal to the current object.           |
 
 ## Equals(Wildcard)
 
@@ -57,6 +37,26 @@ An object to compare with this object.
 bool
 
  if the current object is equal to the `other` parameter; otherwise, .
+
+## Equals(object)
+
+Determines whether the specified object is equal to the current object.
+
+```csharp
+public bool Equals(object obj);
+```
+
+### Parameters
+
+`obj`  object
+
+The object to compare with the current object.
+
+### Returns
+
+bool
+
+ if the specified object  is equal to the current object; otherwise, .
 
 ___
 
