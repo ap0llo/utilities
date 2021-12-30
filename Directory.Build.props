@@ -46,8 +46,14 @@
     <PackageProjectUrl>https://github.com/ap0llo/utilities</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>A collection of utility functions for usage in C#/.NET projects</Description>
-    <Copyright>Copyright (c) 2017-2020, Andreas Gruenwald</Copyright>
+    <Copyright>Copyright (c) 2017-2021, Andreas Gruenwald</Copyright>
   </PropertyGroup>
 
+  <!-- Use NuGet lock file -->
+  <PropertyGroup>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- When running in Azure Pipelines, use locked mode -->
+    <RestoreLockedMode Condition=" '$(TF_BUILD)' == 'true' ">true</RestoreLockedMode>
+  </PropertyGroup>
 
 </Project>
