@@ -63,6 +63,13 @@ jobs:
     inputs:
       packageType: sdk
       useGlobalJson: true
+      
+  # Install .NET 5 runtime (requried to run local tools)
+  - task: UseDotNet@2
+    displayName: 'Install .NET 5 runtime'
+    inputs:
+      packageType: runtime
+      version: 5.0.x
 
   # Restore local .NET Core tools
   - task: DotNetCoreCLI@2
@@ -77,7 +84,7 @@ jobs:
     displayName: Set Version
 
   # Check the formatting using dotnet-format
-  - script: dotnet format ./src --folder --check
+  - script: dotnet dotnet-format ./src --folder --check
     displayName: Check code formatting
   
   # Restore, Build, Test
@@ -207,12 +214,19 @@ jobs:
   condition: succeeded('Publish_to_NuGet_org')
   steps:
 
-  # Install .NET Core SDK and runtime (version specified in the variables section)
+  # Install .NET SDK (version specified in the variables section)
   - task: UseDotNet@2
-    displayName: 'Install .NET Core SDK'
+    displayName: 'Install .NET SDK'
     inputs:
       packageType: sdk
       useGlobalJson: true
+    
+  # Install .NET 5 runtime (requried to run local tools)
+  - task: UseDotNet@2
+    displayName: 'Install .NET 5 runtime'
+    inputs:
+      packageType: runtime
+      version: 5.0.x
 
   # Restore local .NET Core tools
   - task: DotNetCoreCLI@2
