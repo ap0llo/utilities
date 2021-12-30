@@ -1,14 +1,25 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+﻿<Project>
+
+  <Import Project="Sdk.props" Sdk="MSBuild.Sdk.Extras" />
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp3.1;net472</TargetFrameworks>
     <IsPackable>false</IsPackable>
-    <NoWarn>1591;$(NoWarn)</NoWarn>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
 
   <ItemGroup>
     <Compile Include="../Utilities/**/*.cs" Exclude="../Utilities/obj/**" />
   </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="MSBuild.Sdk.Extras" />
+
+  <!-- 
+    During Pack, the reference assembly's Build target is invoked even when 'NoBuild' is set to true.
+    This triggers a check in the SDK to catch that error.
+    Since this cannot currently be fixed, override the target that performs the check so the package can be built
+  -->
+  <Target Name="_CheckForBuildWithNoBuild" />
 
 </Project>
