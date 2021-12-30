@@ -83,8 +83,8 @@ jobs:
   - script: dotnet tool run nbgv cloud --all-vars
     displayName: Set Version
 
-  # Check the formatting using dotnet-format
-  - script: dotnet dotnet-format ./src --folder --check
+  # Check the formatting using dotnet format
+  - script: dotnet format $(solutionPath) --verify-no-changes
     displayName: Check code formatting
   
   # Restore, Build, Test
