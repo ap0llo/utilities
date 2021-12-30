@@ -12,7 +12,7 @@ namespace Grynwald.Utilities.Text
 
         // Hide AppendJoin() methods from projects targeting .NET Core 2.0 or later / .NET Standard 2.1 or later
         // because AppendJoin() is available as built-in functionality.
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0_OR_GREATER|| NETSTANDARD2_1_OR_GREATER))
 
         /// <summary>
         /// Appends the members of a collection, separated by the specified separator.
@@ -31,7 +31,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values)
         {
@@ -55,7 +55,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params string[] values)
         {
@@ -79,7 +79,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, string separator, params object[] values)
         {
@@ -103,7 +103,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params object[] values)
         {
@@ -127,7 +127,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin(this StringBuilder stringBuilder, char separator, params string[] values)
         {
@@ -151,7 +151,7 @@ namespace Grynwald.Utilities.Text
         /// <param name="separator">The separator to insert between the values.</param>
         /// <param name="values">The values to concatenate.</param>
         /// <returns>Returns the specified <see cref="StringBuilder"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static StringBuilder AppendJoin<T>(this StringBuilder stringBuilder, char separator, IEnumerable<T> values)
         {

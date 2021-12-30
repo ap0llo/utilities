@@ -31,7 +31,7 @@ namespace Grynwald.Utilities
 
         // Hide Methods from projects targeting .NET Core 2.0 or later / .NET Standard 2.1 or later
         // because for that target, String.StartsWith(char) and String.EndsWith(char) are built-in
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0_OR_GREATER|| NETSTANDARD2_1_OR_GREATER))
         /// <summary>
         /// Determines if the string starts with the specified character.
         /// </summary>
@@ -46,7 +46,7 @@ namespace Grynwald.Utilities
         /// <param name="str">The string which's first character to check.</param>
         /// <param name="c">The character to compare to the string's first character.</param>
         /// <returns>Returns true if the string has at least one character and the first character matches <paramref name="c"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static bool StartsWith(this string str, char c)
         {
@@ -70,7 +70,7 @@ namespace Grynwald.Utilities
         /// <param name="str">The string which's last character to check.</param>
         /// <param name="c">The character to compare to the string's last character.</param>
         /// <returns>Returns true if the string has at least one character and the last character matches <paramref name="c"/>.</returns>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static bool EndsWith(this string str, char c)
         {
