@@ -33,15 +33,16 @@ For documentation of the types in this libary, have a look at the API docs:
 
 ## Building from source
 
-Utilities is a .NET Standard library and can be built using the .NET SDK (requires the .NET SDK version 3.1.200 as specified in [global.json](./global.json))
+Utilities is a .NET Standard library.#
+Building it from source requires the .NET 6 SDK (version 6.0.101 as specified in [global.json](./global.json)) and uses [Cake](https://cakebuild.net/) for the build.
 
-```bat
-  dotnet restore .\src\Utilities.sln
+To execute the default task, run
 
-  dotnet build .\src\Utilities.sln
-
-  dotnet pack .\src\Utilities.sln
+```ps1
+.\build.ps1
 ```
+
+This will build the project, run all tests and pack the NuGet package.
 
 ## Acknowledgments
 
@@ -51,18 +52,26 @@ Thanks to all the people contribution to these projects:
 - [Nerdbank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning/)
 - [SourceLink](https://github.com/dotnet/sourcelink)
 - [xUnit](http://xunit.github.io/)
+- [ReportGenerator](https://github.com/danielpalme/ReportGenerator)
+- [Cake](https://cakebuild.net/)
+- [Cake.BuildSystems.Module](https://github.com/cake-contrib/Cake.BuildSystems.Module)
+
 
 ## Versioning and Branching
 
-The version of the library is automatically derived from git and the information in `version.json` using [Nerdbank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning):
+The version of this project is automatically derived from git and the information
+in `version.json` using [Nerdbank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning):
 
-- The master branch  always contains the latest version. Packages produced from master are always marked as pre-release versions (using the `-pre` suffix).
-- Stable versions are built from release branches. Build from release branches will have no `-pre` suffix
-- Builds from any other branch will have both the `-pre` prerelease tag and the git commit hash included in the version string
+- The master branch  always contains the latest version. Packages produced from
+  master are always marked as pre-release versions (using the `-pre` suffix).
+- Stable versions are built from release branches. Build from release branches
+  will have no `-pre` suffix
+- Builds from any other branch will have both the `-pre` prerelease tag and the git
+  commit hash included in the version string
 
-To create a new release branch use the [`nbgv` tool](https://www.nuget.org/packages/nbgv/) (at least version `3.0.4-beta`):
+To create a new release branch use the [`nbgv` tool](https://www.nuget.org/packages/nbgv/):
 
 ```ps1
-dotnet tool install --global nbgv --version 3.0.4-beta
-nbgv prepare-release
+dotnet tool restore
+dotnet tool run nbgv -- prepare-release
 ```
