@@ -24,14 +24,14 @@ namespace Grynwald.Utilities.Test
                         .Single()
                         .Items
                         .Where(x => assemblyFileExtensions.Contains(Path.GetExtension(x)))
-                        .ToDictionary(Path.GetFileNameWithoutExtension);
+                        .ToDictionary(x => Path.GetFileNameWithoutExtension(x));
 
                     var identity = packageReader.NuspecReader.GetIdentity();
                     foreach (var referenceGroup in packageReader.GetItems("ref"))
                     {
                         var referenceAssemblies = referenceGroup.Items
                             .Where(x => assemblyFileExtensions.Contains(Path.GetExtension(x)))
-                            .ToDictionary(Path.GetFileNameWithoutExtension);
+                            .ToDictionary(x => Path.GetFileNameWithoutExtension(x));
 
                         foreach (var assemblyName in referenceAssemblies.Keys)
                         {
