@@ -48,8 +48,8 @@ namespace Grynwald.Utilities.Collections
 
         // ToHashSet exists in .NET Core 2.0, .NET Standard 2.1 and .NET Framework 4.7.2
         // Exclude the method from the reference assembly for these target frameworks
-        // so a project targeting netcoreapp2.0, uses the built-in method
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NET472 || NETSTANDARD2_1))
+        // so a project targeting these frameworks, uses the built-in method
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0_OR_GREATER|| NET472_OR_GREATER || NETSTANDARD2_1_OR_GREATER))
 
         /// <summary>
         /// Creates a new <see cref="HashSet{T}"/> with elements copied from the enumerable
@@ -67,7 +67,7 @@ namespace Grynwald.Utilities.Collections
         /// <typeparam name="T">The type of elements in the enumerable.</typeparam>
         /// <param name="enumerable">The collection of items to copy to the set.</param>
         [HiddenFromReferenceAssembly("net472")]
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable) => new HashSet<T>(enumerable);
 
@@ -88,7 +88,7 @@ namespace Grynwald.Utilities.Collections
         /// <param name="enumerable">The collection of items to copy to the set.</param>
         /// <param name="comparer">The comparer to use for creating the set.</param>
         [HiddenFromReferenceAssembly("net472")]
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static HashSet<T> ToHashSet<T>(this IEnumerable<T> enumerable, IEqualityComparer<T> comparer) =>
             new HashSet<T>(enumerable, comparer);

@@ -36,9 +36,9 @@ namespace Grynwald.Utilities.Collections
         }
 
         // GetValueOrDefault was added in .NET Core 2.0.
-        // Exclude the method from the reference assembly for .NET Core 2.0,
-        // so a project targeting netcoreapp2.0, uses the built-in method
-#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0 || NETCOREAPP2_1 || NETSTANDARD2_1))
+        // Exclude the method from the reference assembly for .NET Core 2.0 or later,
+        // so a project targeting netcoreapp2.0 or later, uses the built-in method
+#if !(REFERENCE_ASSEMBLY && (NETCOREAPP2_0_OR_GREATER || NETSTANDARD2_1_OR_GREATER))
 
         /// <summary>
         /// Tries to get the element with the specified key.
@@ -56,7 +56,7 @@ namespace Grynwald.Utilities.Collections
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary to retrieve the value from.</param>
         /// <param name="key">The key to locate in the dictionary.</param>
-        [HiddenFromReferenceAssembly("netcoreapp2.0")]
+        [HiddenFromReferenceAssembly("netcoreapp3.1")]
         [HiddenFromReferenceAssembly("netstandard2.1")]
         public static TValue GetValueOrDefault<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary, TKey key) => dictionary.GetValueOrDefault(key, default);
 
