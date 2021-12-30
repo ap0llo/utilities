@@ -6,13 +6,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <DocumentationFile>$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <!--
-      By default, all warnings are treated as errors.
-      However, some warnings can be ignored:
-      - CS1591: Missing XML comment for publicly visible type or member
-    -->
-    <NoWarn>$(NoWarn);1591;</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

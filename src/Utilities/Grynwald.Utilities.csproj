@@ -1,16 +1,14 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <DocumentationFile>$(OutputPath)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <TargetFramework>netstandard2.0</TargetFramework>    
     <!--
       By default, all warnings are treated as errors.
       However, some warnings can be ignored:
-      - CS1591: Missing XML comment for publicly visible type or member
       - NU5128, NU5131: NuGet warnings that pack emits because of the
         reference assemblies included in the package.
     -->
-    <NoWarn>$(NoWarn);1591;NU5128;NU5131</NoWarn>
+    <NoWarn>$(NoWarn);NU5128;NU5131</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
