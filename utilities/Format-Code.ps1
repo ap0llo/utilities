@@ -11,7 +11,7 @@
 Push-Location (Get-RepositoryRoot)
 try {
     log "Running dotnet format"
-    exec "dotnet format ./src/Utilities.sln --verify-no-changes"
+    exec "dotnet format Utilities.sln --verify-no-changes"
 }
 finally {
     Pop-Location

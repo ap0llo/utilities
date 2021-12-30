@@ -2,26 +2,27 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31808.319
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities", "Utilities\Grynwald.Utilities.csproj", "{086E530E-68D9-4ACB-B462-C1C6671D61E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities", "src\Utilities\Grynwald.Utilities.csproj", "{086E530E-68D9-4ACB-B462-C1C6671D61E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Test", "Utilities.Test\Grynwald.Utilities.Test.csproj", "{851D80EC-56ED-4270-BFA6-5E07A79FB933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Test", "src\Utilities.Test\Grynwald.Utilities.Test.csproj", "{851D80EC-56ED-4270-BFA6-5E07A79FB933}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.ReferenceAssemblies", "Utilities.ReferenceAssemblies\Grynwald.Utilities.ReferenceAssemblies.csproj", "{A2E64D65-8B8E-4824-BFB9-779FF6269E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.ReferenceAssemblies", "src\Utilities.ReferenceAssemblies\Grynwald.Utilities.ReferenceAssemblies.csproj", "{A2E64D65-8B8E-4824-BFB9-779FF6269E83}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64115D43-25B6-43BC-BE4F-89FA85CF4A64}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Configuration", "Utilities.Configuration\Grynwald.Utilities.Configuration.csproj", "{FA9AF47C-176B-48A9-BFAE-212D84E589AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Configuration", "src\Utilities.Configuration\Grynwald.Utilities.Configuration.csproj", "{FA9AF47C-176B-48A9-BFAE-212D84E589AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Configuration.Test", "Utilities.Configuration.Test\Grynwald.Utilities.Configuration.Test.csproj", "{8F170DDF-4DF0-4915-A636-BF397E9E35EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Configuration.Test", "src\Utilities.Configuration.Test\Grynwald.Utilities.Configuration.Test.csproj", "{8F170DDF-4DF0-4915-A636-BF397E9E35EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grynwald.Utilities.Configuration", "Grynwald.Utilities.Configuration", "{D50D3DC4-5827-44BA-8816-95B678072131}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grynwald.Utilities", "Grynwald.Utilities", "{E7229523-011C-4AC8-9384-DF54226FFC6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Logging", "Utilities.Logging\Grynwald.Utilities.Logging.csproj", "{7E3EC71C-12F8-4923-9CDA-350F34A09ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grynwald.Utilities.Logging", "src\Utilities.Logging\Grynwald.Utilities.Logging.csproj", "{7E3EC71C-12F8-4923-9CDA-350F34A09ED3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grynwald.Utilities.Logging", "Grynwald.Utilities.Logging", "{EA7538A0-CFE5-4F1D-9988-0C02E72CE503}"
 EndProject
