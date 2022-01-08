@@ -1,5 +1,16 @@
 {
     "$schema": "https://raw.githubusercontent.com/ap0llo/changelog/master/schemas/configuration/schema.json",
     "changelog": {
+        "scopes": {
+            "common" : {
+                "displayName": "Common Utilities"
+            },
+            "configuration" : {
+                "displayName": "Configuration Utilities"
+            },
+            "logging" : {
+                "displayName": "Logging Utilities"
+            }
+        }
     }
 }
