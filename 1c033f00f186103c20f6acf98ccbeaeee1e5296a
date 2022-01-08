@@ -1,0 +1,7 @@
+build(deps): Update Nerdbank.GitVersioning to version 3.4.205
+
+Updates-dependency: Nerdbank.GitVersioning
+Updates-dependency-from-version: 3.4.203
+Updates-dependency-to-version: 3.4.205
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Pull-Request: #66
