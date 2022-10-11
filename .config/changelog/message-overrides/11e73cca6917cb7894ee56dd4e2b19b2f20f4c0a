@@ -1,0 +1,3 @@
+fix(common): In TemporaryDirectory fix deletion of directory if it contains read-only files
+
+Delete temporary directory when disposing TemporaryDirectory instances, even if the directory contains read-only files.
