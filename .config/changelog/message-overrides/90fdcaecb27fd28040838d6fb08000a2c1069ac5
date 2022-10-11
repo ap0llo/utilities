@@ -1,0 +1,6 @@
+feat(configuration): Add support for arrays and enumerables to object configuration provider
+
+Add support for IEnumerables and arrays of supported types to ConfigurationBuilderExtensions.AddObject().
+Properties of collection types are mapped to multiple entries in the configuration system and will use the ":x" suffix as settings key.
+
+For example, a property of type 'string[]' with two elements and a "ConfigurationValue" attribute specifying a key of "setting1" will be mapped to two configuration values: "setting1:0" and "setting1:1"

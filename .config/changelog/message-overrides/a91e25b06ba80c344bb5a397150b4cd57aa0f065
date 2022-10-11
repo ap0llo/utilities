@@ -1,0 +1,1 @@
+feat(configuration): Make ConfigurationBuilderExtensions.IsSupportedPropertyType() method public

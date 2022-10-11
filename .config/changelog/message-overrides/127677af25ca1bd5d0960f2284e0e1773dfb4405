@@ -1,0 +1,5 @@
+feat(logging): Add ILogger implementation
+
+Add SimpleConsoleLogger, an implementation of Microsoft.Extensions.Logging.ILogger that supports colored console output
+
+Pull-Request: #8

@@ -11,6 +11,9 @@
             "logging" : {
                 "displayName": "Logging Utilities"
             }
+        },
+        "messageOverrides": {
+            "provider": "FileSystem"
         }
     }
 }
