@@ -21,7 +21,7 @@ public bool IsEnabled(LogLevel logLevel);
 
 `logLevel`  LogLevel
 
-level to be checked.
+Level to be checked.
 
 ## Returns
 
